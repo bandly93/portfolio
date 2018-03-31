@@ -6,7 +6,7 @@ import React from 'react';
 import serialize from 'serialize-javascript';
 import path from 'path';
 import { Provider } from 'react-redux';
-import configureStore, {reducers} from '../client/redux/store.js';
+import configureStore from '../client/redux/store.js';
 
 const app = express();
 const port = 3000;

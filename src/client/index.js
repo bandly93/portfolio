@@ -2,7 +2,7 @@ import React from 'react';
 import { hydrate } from 'react-dom';
 import { Provider } from 'react-redux';
 import App from '../shared/App';
-import configureStore,{reducers} from './redux/store.js';
+import configureStore from './redux/store.js';
 
 const preloadedState = window.__PRELOADED_STATE__;
 
