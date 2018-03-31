@@ -1,10 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		server : './src/server/index.js'
+		server : ['./src/server/index.js','./src/shared/style.css']
 	},
 	output: {
 		filename : '[name]-bundle.js',
@@ -21,7 +23,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ { loader: "style-loader" } , { loader: "css-loader" } ]
+				use : ExtractTextPlugin.extract({
+					fallback:'style-loader',
+					use:[ { loader:'css-loader' }]
+				})
+				
       },
       {
         test: /\.(jpg|png|gif)$/,
@@ -29,4 +35,9 @@ module.exports = {
       },
     ]
   },
+	plugins : [
+		new ExtractTextPlugin({filename:'[name]-bundle.css',allChunks:true}),
+
+		//new HtmlWebpackPlugin(),
+	]
 }

@@ -1,9 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		client: './src/client/index.js'
+		client: ['./src/client/index.js','./src/shared/style.css'],	
 	},
 	output : {
 		filename: '[name]-bundle.js',
@@ -13,6 +15,8 @@ module.exports = {
 	devtool : 'source-map',
 	devServer: {
   	publicPath: '/',
+		overlay:true,
+		hot:true,
     contentBase: './src/client',
     inline: true,
     port: 8080, 
@@ -33,7 +37,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ { loader: "style-loader" } , { loader: "css-loader" } ]
+				use: ExtractTextPlugin.extract({
+					fallback:'style-loader',
+					use:[ { loader: 'css-loader' } ]
+				})
       },
       {
         test: /\.(jpg|png|gif)$/,
@@ -44,6 +51,10 @@ module.exports = {
 	plugins: [
 		new webpack.DefinePlugin({
 			__isBrowser__ : 'true'
+		}),
+		new ExtractTextPlugin({
+			filename : '[name]-bundle.css',
+			allChunks:true
 		})
 	]
 }

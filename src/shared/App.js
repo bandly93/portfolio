@@ -1,12 +1,26 @@
 import React, {Component,Fragment} from 'react';
+import style from './style.css';
+import { connect } from 'react-redux';
+import { updateData } from '../client/redux/viewModule.js';
 
 class App extends Component{
-	render(){
+	render(){	
 		return<Fragment>
-			<h1> Hello {this.props.data} </h1>
+			<h1> Hello World! </h1>
 		</Fragment>
-
 	}
 }
 
-export default App;
+const mapStateToProps = (state) => {
+	return{
+		view:state.view,	
+	}
+}
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		updateData:(data) => dispatch(updateData(data)),
+	}
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);
