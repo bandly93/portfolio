@@ -17,7 +17,8 @@ export const viewReducer = (state = initialState, action) => {
 }
 
 let initialState = {
-	view:0
+	innerHeight:0,
+	innerWidth:0,
 }
 
 export default viewReducer;

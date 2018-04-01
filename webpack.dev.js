@@ -14,10 +14,9 @@ module.exports = {
 	mode:'development',
 	devtool : 'source-map',
 	devServer: {
-  	publicPath: '/',
+		contentBase : path.join(__dirname,'dist'),
 		overlay:true,
 		hot:true,
-    contentBase: './src/client',
     inline: true,
     port: 8080, 
     proxy: {
