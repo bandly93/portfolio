@@ -1,4 +1,3 @@
-
 export const UPDATE_VIEW = 'UPDATE_VIEW';
 
 export const updateView = (data) => {
@@ -17,8 +16,8 @@ export const viewReducer = (state = initialState, action) => {
 }
 
 let initialState = {
-	innerHeight:0,
-	innerWidth:0,
+	innerHeight:null,
+	innerWidth:null,
 }
 
 export default viewReducer;

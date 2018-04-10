@@ -10,18 +10,19 @@ module.exports = {
 	output : {
 		filename: '[name]-bundle.js',
 		path: path.resolve(__dirname,'dist'),
+		publicPath: '/',
 	},
 	mode:'development',
-	devtool : 'source-map',
+	devtool : 'inline-source-map',
 	devServer: {
-		contentBase : path.join(__dirname,'dist'),
+		contentBase : 'dist',
+		publicPath : '/',
 		overlay:true,
-		hot:true,
     inline: true,
     port: 8080, 
     proxy: {
     	'**': {
-      	target: 'http://localhost:3000',
+      	target: 'http://[::1]:3000',
         changeOrigin: true,
         secure:false
       }
@@ -51,9 +52,10 @@ module.exports = {
 		new webpack.DefinePlugin({
 			__isBrowser__ : 'true'
 		}),
+		new webpack.NamedModulesPlugin(),
 		new ExtractTextPlugin({
 			filename : '[name]-bundle.css',
 			allChunks:true
-		})
+		}),
 	]
 }

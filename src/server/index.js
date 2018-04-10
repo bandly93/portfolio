@@ -1,17 +1,17 @@
 import express from 'express';
-import cors from 'cors';
 import { renderToString } from 'react-dom/server';
 import App from '../shared/App';
 import React from 'react';
 import serialize from 'serialize-javascript';
 import path from 'path';
 import { Provider } from 'react-redux';
-import configureStore from '../client/redux/store.js';
+import configureStore from '../shared/redux/store.js';
+import expressStaticGzip from 'express-static-gzip';
 
 const app = express();
 const port = 3000;
 
-app.use(express.static('dist'));
+app.use(expressStaticGzip('dist',{enableBrotli:true}));
 app.use(handleRender);
 
 function handleRender(req,res) {
@@ -32,8 +32,8 @@ function renderFullPage(html,preloadedState){
 		<html>
       <head>
         <title>Portfolio</title>
-					<link href = '/client-bundle.css' rel='stylesheet'>
-			 </head>
+				<link href = '/client-bundle.css' rel='stylesheet'>
+			</head>
       <body>
         <div id="root">${html}</div>
 				<script src= '/client-bundle.js'></script>

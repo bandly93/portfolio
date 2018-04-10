@@ -1,7 +1,7 @@
 import React, {Component,Fragment} from 'react';
-import style from './style.css';
 import { connect } from 'react-redux';
-import { updateView } from '../client/redux/viewModule.js';
+import { updateView } from '../shared/redux/viewModule.js';
+import styles from './styles.css';
 
 class App extends Component{	
 	componentDidMount(){
@@ -18,13 +18,13 @@ class App extends Component{
 	render(){
 		return<div className ='profile'>
 			<h1> Portfolio Page!! </h1>
-			<p> Band Ly </p>
+			<p> Band Ly! </p>
 			<p> ScreenHeight : {this.props.view.innerHeight} </p>
 			<p>	ScreenWidth : {this.props.view.innerWidth} </p>
 			<p> Things to add to portfolio </p>
-			<li>Linked-in, github</li>
-			<li> projects ( volcano )</li>
-			<li> interests </li>
+			<li> Linked-in, Github </li>
+			<li> Projects ( volcano ) </li>
+			<li> Interests: Computer Science </li>
 		</div>
 	}
 }

@@ -36,8 +36,9 @@ module.exports = {
     ]
   },
 	plugins : [
-		new ExtractTextPlugin({filename:'[name]-bundle.css',allChunks:true}),
-
-		//new HtmlWebpackPlugin(),
-	]
+		new ExtractTextPlugin({
+			filename : '[name]-bundle.css',
+			allChunks:true
+		}),
+	]	
 }

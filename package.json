@@ -4,9 +4,11 @@
   "description": "",
   "main": "./src/server/index.js",
   "scripts": {
-    "build": "webpack --config webpack.dev.js & webpack --config webpack.server.js",
-    "start": "webpack-dev-server --hot --config webpack.dev.js --mode development",
-    "server": "nodemon src/server/index.js --exec babel-node"
+    "build:dev": "webpack --config webpack.dev.js --mode development",
+    "build": "BABEL_ENV=production webpack --config webpack.prod.js --env.NODE_ENV=production && webpack --config webpack.server.js --mode production",
+    "start": "webpack-dev-server --config webpack.dev.js --mode development",
+    "server": "nodemon --watch src/server --inspect src/server/index.js --exec babel-node",
+    "prod": "NODE_ENV=production node dist/client-bundle.js"
   },
   "keywords": [],
   "author": "",
@@ -14,14 +16,20 @@
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
+    "babel-minify": "^0.3.0",
+    "babel-minify-webpack-plugin": "^0.3.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "brotli-webpack-plugin": "^0.5.0",
+    "compression-webpack-plugin": "^1.1.11",
     "cors": "^2.8.4",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
+    "express-static-gzip": "^0.3.2",
     "file-loader": "^1.1.11",
     "isomorphic-fetch": "^2.2.1",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
@@ -30,6 +38,7 @@
     "redux-thunk": "^2.2.0",
     "serialize-javascript": "^1.4.0",
     "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.4.1",
     "webpack-node-externals": "^1.6.0"
   },
