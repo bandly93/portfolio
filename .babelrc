@@ -1,4 +1,4 @@
 {
-	"presets": [ "env" , "react" ],
-	"plugins" : [ "transform-object-rest-spread",'css-modules-transform' ]
+	"presets": [ "env" , "react" , 'stage-3' ],
+	"plugins" : ['css-modules-transform','transform-class-properties']
 }

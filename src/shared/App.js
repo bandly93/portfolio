@@ -9,7 +9,7 @@ class App extends Component{
 		window.addEventListener('resize',()=>this.view());
 	}
 	
-	view(){
+	view = () => {
 		const { innerHeight,innerWidth } = window;
 		const { updateView } = this.props;
 		updateView({innerHeight,innerWidth});
