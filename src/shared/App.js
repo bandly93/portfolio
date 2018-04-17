@@ -2,6 +2,7 @@ import React, {Component,Fragment} from 'react';
 import { connect } from 'react-redux';
 import { updateView } from '../shared/redux/viewModule.js';
 import styles from './styles.css';
+import NavBar from './NavBar.js';
 
 class App extends Component{	
 	componentDidMount(){
@@ -17,14 +18,7 @@ class App extends Component{
 
 	render(){
 		return<div className ='profile'>
-			<h1> Portfolio Page!! </h1>
-			<p> Band Ly! </p>
-			<p> ScreenHeight : {this.props.view.innerHeight} </p>
-			<p>	ScreenWidth : {this.props.view.innerWidth} </p>
-			<p> Things to add to portfolio </p>
-			<li> Linked-in, Github </li>
-			<li> Projects ( volcano ) </li>
-			<li> Interests: Computer Science </li>
+				<NavBar />	
 		</div>
 	}
 }

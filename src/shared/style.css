@@ -1,10 +1,10 @@
 body {
 	color:white;
   margin: 0;
-  background-color: #444;
+  background-color: grey;
   font-family: Helvetica;
 }
-
+/*
 .profile {
   display: flex;
   -ms-align-items: center;
@@ -12,4 +12,23 @@ body {
   justify-content: center;
   height: 100vh;
   flex-flow: column;
+}
+*/
+.navbar {
+	color:yellow;
+}
+
+.navbar ul {
+	list-style-type:none;
+	display:flex;
+	width:100%;
+	background-color:white;
+	top:0;
+	margin:0;
+}
+
+.navbar a {
+	display:block;
+	padding:10px;
+	float:right;
 }
