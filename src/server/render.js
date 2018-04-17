@@ -3,13 +3,16 @@ import configureStore from '../shared/redux/store.js';
 import { Provider } from 'react-redux';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
+import { StaticRouter as Router} from 'react-router';
 import App from '../shared/App';
 
 export const handleRender = (req,res) => {
 	const store = configureStore(preloadedState);
 	const html = renderToString(
 		<Provider store = {store}>
-			<App />
+			<Router>
+				<App />
+			</Router>
 		</Provider>
 	)
 	const preloadedState = store.getState();
