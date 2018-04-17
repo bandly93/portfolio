@@ -24,12 +24,14 @@ class NavBar extends Component{
 	}
 
 	render(){
-		return<div className = 'navbar'>
+		return	<Router>
+			<div className = 'navbar'>
 			{this.list()}
 			<Switch>
 				{this.routes()}
 			</Switch>
 		</div>
+		</Router>
 	}
 }
 
