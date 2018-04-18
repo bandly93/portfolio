@@ -14,8 +14,7 @@ class NavBar extends Component{
 	list = () => {
 		 return <ul> 
 			{
-				RoutesArray.map((route,i) => 
-					<li key = {i}>
+				RoutesArray.map((route,i) => <li key = {i}> 
 						<Link to = {route.path}>{route.description}</Link>
 					</li>
 				)
@@ -24,14 +23,14 @@ class NavBar extends Component{
 	}
 
 	render(){
-		return	<Router>
+		return (
 			<div className = 'navbar'>
 			{this.list()}
 			<Switch>
 				{this.routes()}
 			</Switch>
 		</div>
-		</Router>
+		)
 	}
 }
 

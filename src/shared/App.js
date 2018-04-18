@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { updateView } from '../shared/redux/viewModule.js';
 import styles from './styles.css';
 import NavBar from './NavBar.js';
+import { withRouter } from 'react-router-dom';
+
 
 class App extends Component{	
 	componentDidMount(){
@@ -35,4 +37,4 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(App));

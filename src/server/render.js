@@ -7,10 +7,12 @@ import { StaticRouter as Router} from 'react-router';
 import App from '../shared/App';
 
 export const handleRender = (req,res) => {
-	const store = configureStore(preloadedState);
+	const store = configureStore();
+	let context = {};
+	console.log(req.url);
 	const html = renderToString(
 		<Provider store = {store}>
-			<Router>
+			<Router context = {context} location = {req.url}>
 				<App />
 			</Router>
 		</Provider>
@@ -25,6 +27,7 @@ export const renderFullPage = (html,preloadedState) => {
 		<html>
       <head>
         <title>Portfolio</title>
+				<link rel="icon" href="data:;base64,iVBORwOKGO=" />
 				<link href = '/client-bundle.css' rel='stylesheet'>
 			</head>
       <body>

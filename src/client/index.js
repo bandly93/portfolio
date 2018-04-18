@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import App from '../shared/App';
 import configureStore from '../shared/redux/store.js';
 import { BrowserRouter } from 'react-router-dom';
-
+console.log(App);
 
 const preloadedState = window.__PRELOADED_STATE__;
 
