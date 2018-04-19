@@ -9,7 +9,6 @@ import App from '../shared/App';
 export const handleRender = (req,res) => {
 	const store = configureStore();
 	let context = {};
-	console.log(req.url);
 	const html = renderToString(
 		<Provider store = {store}>
 			<Router context = {context} location = {req.url}>

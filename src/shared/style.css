@@ -1,5 +1,5 @@
 body {
-	color:white;
+	color:black;
   margin: 0;
   background-color: grey;
   font-family: Helvetica;
@@ -14,9 +14,6 @@ body {
   flex-flow: column;
 }
 */
-.navbar {
-	color:yellow;
-}
 
 .navbar ul {
 	list-style-type:none;
@@ -30,5 +27,4 @@ body {
 .navbar a {
 	display:block;
 	padding:10px;
-	float:right;
 }
