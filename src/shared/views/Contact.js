@@ -1,22 +1,23 @@
 import React,{ Component,Fragment }  from 'react';
 import { connect } from 'react-redux';
 import { updateData } from '../redux/emailModule.js';
-require('es6-promise').polyfill();
-require('isomorphic-fetch');
+import { sendData } from '../redux/fetchThunk.js';
+import { formValidation } from '../utils/formValidation.js';
 
 class Contact extends Component{
 
 	sendEmail = (e) => {
 		e.preventDefault();
-		
-	
+		const { email } = this.props;
 
-		fetch('/email',{
-			method:'POST',
-			credentials : 'same-origin',
-			headers: {'Content-Type': 'application/json'},
-			body:JSON.stringify({'data':this.props.email})
-		})
+		if(email.isValidated){
+			console.log('validated');
+			sendData('/email','POST',email);
+		}else{
+			console.log('not quite validated');
+
+		}
+
 	}
 	
 	onFormChange = (e) => {
@@ -24,8 +25,11 @@ class Contact extends Component{
 		const { name,value } = e.currentTarget;
 		updateData({[name]:value})
 	}
+
 	render(){
 		const { name,email,message } = this.props.email;
+		let fv = new formValidation();
+		console.log(fv.isEmpty(''));
 		return<div className = 'contact-form'>
 			<form onSubmit = {this.sendEmail}>
 				Name : <input type = 'text' name = 'name' value = {name} onChange = {this.onFormChange}/>

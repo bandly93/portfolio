@@ -4,6 +4,7 @@ let initialState = {
 	name : '',
 	email : '',
 	message : '',
+	isValidated : false,
 }
 
 export const updateData = (data) => {
