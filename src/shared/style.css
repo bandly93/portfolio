@@ -53,3 +53,11 @@ body {
 	margin-left:10%;
 	border:1px solid black;
 }
+
+.contact-form{
+	width:50%;
+	border:2px solid black;
+	border-radius: 10px;
+}
+
+
