@@ -5,7 +5,6 @@ const config = require('../../../config.json');
 
 emailRouter.route('/')
 .post((req,res) => {
-	console.log(req.body);
 	const { GMAIL_USER,GMAIL_PASSWORD } = config;
 	let transporter = nodeMailer.createTransport({
 		service:'Gmail',
@@ -16,16 +15,16 @@ emailRouter.route('/')
 	});
 
 	let mailOptions = {
-		from : req.body.data.name,
+		from : req.body.name,
 		to : GMAIL_USER,
-		subject : req.body.data.email,
-		text : req.body.data.message,
+		subject : req.body.subject + ' | From : ' + req.body.email,
+		text : req.body.message,
 	}
 	transporter.sendMail(mailOptions,function(error,response){
 		if(error){
-			console.log(error)
+			res.json({status:'failure'});
 		}else{
-			console.log(response);
+			res.json({status:'success'});
 		}
 	})
 })

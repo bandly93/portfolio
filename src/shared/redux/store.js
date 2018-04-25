@@ -1,11 +1,11 @@
 import view from './viewModule.js';
-import email from './emailModule.js';
+import contactForm from './emailModule.js';
 import { createStore, applyMiddleware, combineReducers,compose } from 'redux';
 import thunk from 'redux-thunk';
 
 const reducers = combineReducers({
 	view,
-	email,
+	contactForm,
 })
 
 export default function configureStore(preloadedState){

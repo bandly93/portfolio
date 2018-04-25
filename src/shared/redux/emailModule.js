@@ -3,6 +3,7 @@ export const UPDATE_DATA = 'UPDATE_DATA';
 let initialState = {
 	name : '',
 	email : '',
+	subject : '',
 	message : '',
 	isValidated : false,
 }
