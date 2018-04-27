@@ -14,12 +14,7 @@ export const RoutesArray = [
 		path : '/projects',
 		description : 'Projects',
 		component : Project,
-	},
-	{
-		path : '/about_me',
-		description : 'About Me',
-		component : About,
-	},
+	},	
 	{
 		path : '/contact',
 		description : 'Contact',

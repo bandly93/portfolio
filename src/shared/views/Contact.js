@@ -43,24 +43,31 @@ class Contact extends Component{
 			<form onSubmit = {this.sendEmail}>
 				<span>Name</span>
 				<input 
+					className = 'input-name'
 					type = 'text' 
 					name = 'name'
-					value = {name} 
+					value = {name}
 					onChange = {this.onFormChange} />
 				<span>Email</span>
 				<input 
+					className = 'input-email'
 					type = 'email' 
 					name = 'email'
 					value = {email} 
 					onChange = {this.onFormChange} />
 				<span>Subject</span>
 				<input 
+					className = 'input-subject'
 					type = 'text' 
 					name = 'subject' 
 					value = {subject} 
 					onChange = {this.onFormChange} />
 				<span>Message</span> 
-				<textarea name = 'message' value = {message} onChange = {this.onFormChange} />
+				<textarea 
+					className = 'textarea-message'
+					name = 'message' 
+					value = {message} 
+					onChange = {this.onFormChange} />
 				<input type = 'submit' disabled = {shouldBeDisabled} />
 			</form>
 		</div>

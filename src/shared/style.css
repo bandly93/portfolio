@@ -5,16 +5,6 @@ body {
   font-family: Helvetica;
 	
 }
-/*
-.profile {
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  flex-flow: column;
-}
-*/
 
 .navbar ul {
 	list-style-type:none;
@@ -55,13 +45,13 @@ body {
 }
 
 .contact-form{
-	width:50%;
+	width:30%;
 	display:flex;
 	border:2px solid black;
 	border-radius: 10px;
 	text-align:center;
 	display:flex;
-	margin:0 25%;
+	margin:auto;
 	line-height:1;
 	flex-direction:column;
 	justify-content:center;
@@ -78,10 +68,46 @@ span{
 	display:inline-flex;
 }
 
-
 .error {
 	border:2px solid red;
 	border-radius:4px;
-
 }
 
+.input-name{
+	background-image:url('./images/baby.png');
+}
+
+.input-email{
+	background-image:url('./images/email.png');
+}
+
+.input-subject{
+	background-image:url('./images/chat.png');
+}
+
+.textarea-message{
+	background-image:url('./images/comments.png');
+	background-position: 5px top;
+}
+
+
+input, textarea{
+	background-position: 5px center;
+  background-repeat: no-repeat;
+	background-size:20px;
+	border: 1px solid #ccc;
+   
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px; 
+  -o-border-radius: 4px;
+  border-radius: 4px;
+    
+  padding: 10px 5px 10px 20px;
+  text-indent: 15px;
+    
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 2s;
+  transition: all 0.2s;
+    
+}
