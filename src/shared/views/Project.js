@@ -16,6 +16,7 @@ class Projects extends Component{
 	</Fragment>
 		
 	render(){
+		const blankImg = 'http://thechurchontheway.org/wp-content/uploads/2016/05/placeholder1.png'
 		const projectOptions = [
 			{
 				title:'VB Productions',
@@ -26,14 +27,14 @@ class Projects extends Component{
 			},
 			{
 				url : '//www.google.com',
-				img : 'http://via.placeholder.com/350x150',
+				img : blankImg,
 				title : 'Project 2',
 				subTitle:'Example',
 				description : 'Example project that I will fill in later.',
 			},
 			{
 				url : '//www.google.com',
-				img : 'http://via.placeholder.com/350x150',
+				img : blankImg,
 				title : 'Project 3',
 				subTitle:'Example',
 				description : 'Example project that I will fill in later.',
