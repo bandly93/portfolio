@@ -43,23 +43,27 @@ a:hover{
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .project{
-	border:2px solid black;
 	border-radius:10px;
 	width:50%;
-	margin:10px auto;
-	text-align:center;
-	background-color:WhiteSmoke;	
-}
-
-.project p{
-	font-size:24px;
+	margin:5% 40% auto 10%;
+	
 }
 
 .project a{
 	width:max-content;
-	color:black;
+	color:#D98880;
 	margin:auto;	
 }
+
+.project h1{
+	font-size:48px;
+}
+
+.project h1,h5{
+	margin:0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .resume{
 	background-image:url('./images/color.jpg');
@@ -69,7 +73,7 @@ a:hover{
 
 .contact-form{
 	width:30%;
-	background-color: #7F8C8D;
+	background:linear-gradient(to bottom, #DBD5D5, #D6E6F3);
 	color:#17252A;;
 	text-align:center;
 	display:flex;
@@ -110,7 +114,7 @@ span{
 
 .textarea-message{
 	background-image:url('./images/comments.png');
-	background-position: 5px top;
+	background-position: 5px 5px;
 }
 
 input, textarea{
@@ -134,8 +138,8 @@ input, textarea{
 }
 
 .button{
-	background-color:#17252A;
-	color:white;
+	background-color:white;
 	text-align:center;
 	margin-top:10px;
+	text-indent:0;
 }

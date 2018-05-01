@@ -67,7 +67,7 @@ class Contact extends Component{
 					onChange = {this.onFormChange} />
 				<span>Message</span> 
 				<textarea
-					rows = '15' 
+					rows = '12' 
 					className = 'textarea-message'
 					name = 'message' 
 					value = {message} 
