@@ -7,10 +7,13 @@ import morgan from 'morgan';
 
 const app = express();
 const port = 3000;
+
+
+//parses all the incoming data into req.body
 app.use(bodyParser.urlencoded({
 	extended:true,
 }))
-
+//accept incoming json data.
 app.use(bodyParser.json())
 app.use(morgan('dev'));
 app.use(expressStaticGzip('dist',{enableBrotli:true}));

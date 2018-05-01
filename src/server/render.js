@@ -27,6 +27,7 @@ export const renderFullPage = (html,preloadedState) => {
       <head>
         <title>Portfolio</title>
 				<link rel="icon" href="data:;base64,iVBORwOKGO=" />
+				<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 				<link href = '/client-bundle.css' rel='stylesheet'>
 			</head>
       <body>

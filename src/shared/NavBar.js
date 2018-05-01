@@ -13,12 +13,12 @@ class NavBar extends Component{
 
 	list = () => {
 		 return <ul> 
-			{
-				RoutesArray.map((route,i) => <li key = {i}> 
-						<Link to = {route.path}>{route.description}</Link>
-					</li>
-				)
-			} 
+				<li><Link to = '/'> <img id = 'logo' src = './images/logo.jpg'/></Link></li>
+			<span id = 'span-items'>
+				<li><Link to = '/projects'> Projects</Link></li>
+				<li><Link to = '/contact'> Contact</Link></li>
+				<li><Link to = '/prof_docs'>Resume</Link></li>
+			</span>
 		</ul>
 	}
 

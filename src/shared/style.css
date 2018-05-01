@@ -1,25 +1,46 @@
 body {
 	color:black;
   margin: 0;
-  background-color: AliceBlue;
-  font-family: Helvetica;
-	
+  font-family: Rubik;
 }
 
-.navbar ul {
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.navbar a{
+	color:black;
+	text-decoration:none;
+}
+
+a:hover{
+	color:red;
+}
+
+.navbar ul{
+	padding: 0;
+	margin: 0;
+	background-color:white;
 	list-style-type:none;
-	display:flex;
-	width:100%;
-	background-color:;
-	top:0;
-	margin:0;
+	display:inline-flex;
 	text-align:center;
+	width:100%;
+	justify-content:space-between;
 }
 
-.navbar a {
-	display:block;
-	padding:10px;
+.navbar span{
+	margin:auto 2%;
 }
+
+#span-items li {
+	padding:0 10px;	
+}
+
+#logo{
+	height:60px;
+}
+#logo:hover{
+	cursor:pointer;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .project{
 	border:2px solid black;
@@ -36,36 +57,38 @@ body {
 
 .project a{
 	width:max-content;
+	color:black;
 	margin:auto;	
 }
 
 .resume{
+	background-image:url('./images/color.jpg');
 	margin-left:10%;
 	border:1px solid black;
 }
 
 .contact-form{
 	width:30%;
-	display:flex;
-	border:2px solid black;
-	border-radius: 10px;
+	background-color: #7F8C8D;
+	color:#17252A;;
 	text-align:center;
 	display:flex;
 	margin:auto;
+	border-radius:5px;
 	line-height:1;
 	flex-direction:column;
-	justify-content:center;
-	padding:0 5%;
+	padding:2% 5%;
+	box-shadow: 5px 5px 5px grey;
 }
 
 .contact-form form{
 	display:flex;
 	flex-direction:column;
-
 }
 
 span{
 	display:inline-flex;
+	padding:10px 0;
 }
 
 .error {
@@ -90,7 +113,6 @@ span{
 	background-position: 5px top;
 }
 
-
 input, textarea{
 	background-position: 5px center;
   background-repeat: no-repeat;
@@ -102,12 +124,18 @@ input, textarea{
   -ms-border-radius: 4px; 
   -o-border-radius: 4px;
   border-radius: 4px;
+	text-indent:30px;
     
-  padding: 10px 5px 10px 20px;
-  text-indent: 15px;
+  padding: 10px 5px 10px 5px;
     
   -webkit-transition: all 0.2s;
   -moz-transition: all 2s;
   transition: all 0.2s;
-    
+}
+
+.button{
+	background-color:#17252A;
+	color:white;
+	text-align:center;
+	margin-top:10px;
 }

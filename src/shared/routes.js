@@ -9,20 +9,24 @@ export const RoutesArray = [
 		path : '/',
 		description : 'Home',
 		component : Home,
+		id : 'home-item',
 	},
 	{
 		path : '/projects',
 		description : 'Projects',
 		component : Project,
+		id : 'project-item',
 	},	
 	{
 		path : '/contact',
 		description : 'Contact',
 		component : Contact,
+		id : 'contact-item',
 	},
 	{
 		path : '/prof_docs',
-		description : 'Resume / Cover Letter',
+		description : 'Resume',
 		component : ProfDocs,
+		id : 'resume-item',
 	},
 ]
