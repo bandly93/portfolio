@@ -2,6 +2,7 @@ body {
 	color:black;
   margin: 0;
   font-family: Rubik;
+	background:url('https://hdwallsource.com/img/2014/4/free-background-wallpaper-22918-23554-hd-wallpapers.jpg');
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -15,26 +16,26 @@ a:hover{
 }
 
 .navbar ul{
-	padding: 0;
-	margin: 0;
+	margin-top:0;
+	padding-left:0;
 	background-color:white;
 	list-style-type:none;
 	display:inline-flex;
 	text-align:center;
 	width:100%;
-	justify-content:space-between;
+	justify-content:space-around;
 }
 
 .navbar span{
 	margin:auto 2%;
 }
 
-#span-items li {
+.span-items li {
 	padding:0 10px;	
 }
 
 #logo{
-	height:60px;
+	height:75px;
 }
 #logo:hover{
 	cursor:pointer;
@@ -44,9 +45,9 @@ a:hover{
 
 .project{
 	border-radius:10px;
+	background-color:white;
 	width:50%;
-	margin:5% 40% auto 10%;
-	
+	margin:5% 40% auto 10%;	
 }
 
 .project a{
@@ -66,18 +67,18 @@ a:hover{
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .resume{
-	background-image:url('./images/color.jpg');
-	margin-left:10%;
+	background-image:url('./images/resume.jpg');
+	margin:auto;
 	border:1px solid black;
 }
 
 .contact-form{
 	width:30%;
-	background:linear-gradient(to bottom, #DBD5D5, #D6E6F3);
-	color:#17252A;;
+	color:#17252A;
+	background-color:white;
 	text-align:center;
 	display:flex;
-	margin:auto;
+	margin:3% auto 0 auto;
 	border-radius:5px;
 	line-height:1;
 	flex-direction:column;
@@ -92,7 +93,6 @@ a:hover{
 
 span{
 	display:inline-flex;
-	padding:10px 0;
 }
 
 .error {

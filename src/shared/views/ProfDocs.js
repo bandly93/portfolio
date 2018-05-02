@@ -9,7 +9,7 @@ class ProfDocs extends Component{
 		return<Fragment>
 			<img
 				className = 'resume' 
-				src = '../images/color.jpg'
+				src = '../images/resume.jpg'
 				height = {innerHeight*scale} 
 				width = {(innerHeight*(8.5/11))*scale}
 			/>
