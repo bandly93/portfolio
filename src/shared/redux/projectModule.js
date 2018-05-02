@@ -2,7 +2,7 @@ const SET_DEFAULT_PROJECT = 'SET_DEFAULT_PROJECT';
 const UPDATE_CURRENT_PROJECT = 'UPDATE_CURRENT_PROJECT';
 
 let initialState = {
-	projectName:null 
+	projectIndex:0, 
 }
 
 export const updateProject = (data) => {

@@ -46,8 +46,8 @@ a:hover{
 .project{
 	border-radius:10px;
 	background-color:white;
-	width:50%;
-	margin:5% 40% auto 10%;	
+	width:65%;
+	margin:5% 25% auto 10%;	
 }
 
 .project a{
@@ -142,4 +142,35 @@ input, textarea{
 	text-align:center;
 	margin-top:10px;
 	text-indent:0;
+}
+
+#carousel-indicator{
+	background-color:transparent;
+	display:flex;
+	justify-content:center;
+}
+
+.carousel-indicator-item{
+	padding:0;
+	background-color:white;
+	width:0.5vw;
+	height:0.5vw;
+	padding:5px;
+	margin:0.4%;
+	cursor: pointer;
+	border:2px solid white;
+	border-radius:50%;
+}
+
+.carousel-indicator-item:hover{
+	border:2px solid grey;
+	background-color:grey;
+}
+
+
+.left-button,.right-button{
+	color:white;
+	background:transparent;
+	border:none;
+
 }
