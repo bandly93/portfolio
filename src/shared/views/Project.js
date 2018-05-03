@@ -27,7 +27,7 @@ class Projects extends Component{
 		return <button
 			onClick = {this.updateLogic}
 			name = 'minus'
-			className = 'left-button'>
+			className = 'proj-button'>
 			&#10094;
 		</button>
 	} 
@@ -36,7 +36,7 @@ class Projects extends Component{
 		return <button
 			onClick = {this.updateLogic}
 			name = 'add'
-			className = 'right-button'>
+			className = 'proj-button'>
 			&#10095;
 		</button>
 	}
@@ -78,6 +78,7 @@ class Projects extends Component{
 			<h5> {Proj.subTitle} </h5>
 			<img src = {Proj.img} height ='300' width = '500' />
 			<p><a href = {Proj.url} target = '_blank'> Click here to visit page! </a></p>
+			<p><a href = {Proj.projectUrl} target = '_blank'> Interested in how I coded this project? </a></p>
 		</div>
 	}	
 	

@@ -46,13 +46,20 @@ a:hover{
 .project{
 	border-radius:10px;
 	background-color:white;
-	width:800px;
+	width:900px;
+	
+	padding: 1%;
 }
 
 .project a{
 	width:max-content;
 	color:#D98880;
-	margin:auto;	
+	padding: 1% 1%;	
+}
+
+.project a:hover {
+	color:black;
+
 }
 
 .project h1{
@@ -61,6 +68,7 @@ a:hover{
 
 .project h1,h5{
 	margin:0;
+	padding:1% 1%;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -166,13 +174,22 @@ input, textarea{
 	background-color:grey;
 }
 
-.left-button,.right-button{
+.proj-button{
 	color:white;
 	background:transparent;
 	border:none;
 	font-size:40px;
 	height:fit-content;
 	margin-top:23%
+}
+
+.proj-button:hover {
+	color:black;
+	cursor:pointer;
+
+}
+.proj-button:focus {
+	outline:0;
 }
 
 #project-container{

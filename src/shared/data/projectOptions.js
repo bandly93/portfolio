@@ -7,7 +7,8 @@ export const projectOptions = [
 		subTitle:'Photography + Cinematography',
 		img : 'https://cdn.vox-cdn.com/uploads/chorus_image/image/36244210/dscf0892__1_-2040.0.jpg',
 		url : '//www.volcanoboyz.com/h/multimedia',
-		description: 'A fully-secured and responsive webpage for a multimedia production company.'
+		description: 'A fully-secured and responsive webpage for a multimedia production company.',
+		projectUrl : '//www.github.com/bandly93/volcano',
 	},
 	{
 		url : '//www.google.com',
@@ -15,6 +16,7 @@ export const projectOptions = [
 		title : 'Project 2',
 		subTitle:'Example',
 		description : 'Example project that I will fill in later.',
+		projectUrl : '//www.google.com',
 	},
 	{
 		url : '//www.google.com',
@@ -22,6 +24,7 @@ export const projectOptions = [
 		title : 'Project 3',
 		subTitle:'Example',
 		description : 'Example project that I will fill in later.',
+		projectUrl : '//www.google.com',
 	},
 ]
 
