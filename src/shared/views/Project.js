@@ -5,8 +5,28 @@ import { updateProject } from '../redux/projectModule.js';
 
 class Projects extends Component{
 
+	updateLogic = (e) => {
+		const { name } = e.currentTarget;
+		let index = this.props.projectInfo.projectIndex;
+		let length = projectOptions.length;
+		const { updateProject } = this.props;
+		
+		if(name === 'minus'){
+			if( index <= 0 ) {
+				index = length - 1;
+			}else{
+				index -= 1
+			}
+		}else{
+			index = ( index + 1 ) % length;
+		}
+		updateProject({projectIndex: index});
+	}
+
 	leftButton = () => {
-		return <button 
+		return <button
+			onClick = {this.updateLogic}
+			name = 'minus'
 			className = 'left-button'>
 			&#10094;
 		</button>
@@ -14,6 +34,8 @@ class Projects extends Component{
 
 	rightButton = () => {
 		return <button
+			onClick = {this.updateLogic}
+			name = 'add'
 			className = 'right-button'>
 			&#10095;
 		</button>
@@ -55,16 +77,18 @@ class Projects extends Component{
 			<h1> {Proj.title} </h1>
 			<h5> {Proj.subTitle} </h5>
 			<img src = {Proj.img} height ='300' width = '500' />
-			<p><a href = {Proj.url}> Click here to visit page! </a></p>
+			<p><a href = {Proj.url} target = '_blank'> Click here to visit page! </a></p>
 		</div>
 	}	
 	
 	render(){
 		return<Fragment>
 			{this.carouselIndicator()}
-			<div>{this.projectContainer()}</div>
-			{this.leftButton()}
-			{this.rightButton()}
+			<div id = 'project-container'>
+				{this.leftButton()}
+				{this.projectContainer()}
+				{this.rightButton()}
+			</div>
 		</Fragment>
 	}	
 }

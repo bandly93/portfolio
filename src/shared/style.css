@@ -46,8 +46,7 @@ a:hover{
 .project{
 	border-radius:10px;
 	background-color:white;
-	width:65%;
-	margin:5% 25% auto 10%;	
+	width:800px;
 }
 
 .project a{
@@ -167,10 +166,17 @@ input, textarea{
 	background-color:grey;
 }
 
-
 .left-button,.right-button{
 	color:white;
 	background:transparent;
 	border:none;
+	font-size:40px;
+	height:fit-content;
+	margin-top:23%
+}
 
+#project-container{
+	display:inline-flex;
+	justify-content:space-between;
+	margin-left:10%;
 }

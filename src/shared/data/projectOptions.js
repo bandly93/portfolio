@@ -6,7 +6,7 @@ export const projectOptions = [
 		title:'VB Productions',
 		subTitle:'Photography + Cinematography',
 		img : 'https://cdn.vox-cdn.com/uploads/chorus_image/image/36244210/dscf0892__1_-2040.0.jpg',
-		url : '//www.volcanoboyz.com',
+		url : '//www.volcanoboyz.com/h/multimedia',
 		description: 'A fully-secured and responsive webpage for a multimedia production company.'
 	},
 	{
