@@ -3,7 +3,7 @@
 }
 
 #logo-span{
-	padding: 0 1.5%;
+	padding: 0 3% 0 0;
 }
 
 #testing-span{
@@ -18,12 +18,11 @@
 	text-align:left;
 }
 
-
 body {
 	color:black;
   margin: 0;
   font-family: Rubik;
-	background:url('https://hdwallsource.com/img/2014/4/free-background-wallpaper-22918-23554-hd-wallpapers.jpg');
+	background:url('./images/background.jpg');
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
