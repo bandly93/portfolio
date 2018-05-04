@@ -76,7 +76,15 @@ class Projects extends Component{
 		return <div className = 'project'>
 			<h1> {Proj.title} </h1>
 			<h5> {Proj.subTitle} </h5>
-			<img src = {Proj.img} height ='300' width = '500' />
+			<img id = {Proj.id} src = {Proj.img} height ='300' width = '500' />	
+			<span id = 'testing-span'>
+			<ul>
+				<li>Status : In Production but still developing.</li>
+				<li>Technologies : React, Redux, Webpack, Node, MongoDB, Express.</li>
+				<li>Some content will be here!</li>
+				<li>Some content will be here!</li>
+			</ul>	
+			</span>
 			<p><a href = {Proj.url} target = '_blank'> Click here to visit page! </a></p>
 			<p><a href = {Proj.projectUrl} target = '_blank'> Interested in how I coded this project? </a></p>
 		</div>

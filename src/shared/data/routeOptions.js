@@ -12,17 +12,17 @@ export const RoutesArray = [
 		id : 'home-item',
 	},
 	{
-		path : '/projects',
-		description : 'PROJECTS',
-		component : Project,
-		id : 'project-item',
-	},	
-	{
 		path : '/contact',
 		description : 'CONTACT',
 		component : Contact,
 		id : 'contact-item',
 	},
+	{
+		path : '/projects',
+		description : 'PROJECTS',
+		component : Project,
+		id : 'project-item',
+	},	
 	{
 		path : '/prof_docs',
 		description : 'RESUME',

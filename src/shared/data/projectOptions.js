@@ -1,11 +1,11 @@
-
 export const blankImg = 'http://via.placeholder.com/350x150';
 
 export const projectOptions = [
 	{
 		title:'VB Productions',
 		subTitle:'Photography + Cinematography',
-		img : 'https://cdn.vox-cdn.com/uploads/chorus_image/image/36244210/dscf0892__1_-2040.0.jpg',
+		id : 'volcano-gif',
+		img : './images/testing.gif',
 		url : '//www.volcanoboyz.com/h/multimedia',
 		description: 'A fully-secured and responsive webpage for a multimedia production company.',
 		projectUrl : '//www.github.com/bandly93/volcano',

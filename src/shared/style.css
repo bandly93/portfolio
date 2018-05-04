@@ -1,3 +1,25 @@
+#volcano-gif{
+	background-image: url('./images/testing.gif');
+}
+
+#logo-span{
+	padding: 0 1.5%;
+
+}
+
+#testing-span{
+	position:absolute;
+}
+#testing-span ul {
+	display:inline-block;
+}
+
+#testing-span li{
+	list-style-type:circle;
+	text-align:left;
+}
+
+
 body {
 	color:black;
   margin: 0;
@@ -35,7 +57,9 @@ a:hover{
 }
 
 #logo{
-	height:75px;
+	content:url('./images/logo.jpg');
+	background-repeat : no-repeat;
+	padding: 0 25% 0 0;
 }
 #logo:hover{
 	cursor:pointer;
@@ -46,13 +70,11 @@ a:hover{
 .project{
 	border-radius:10px;
 	background-color:white;
-	width:900px;
-	
+	width:1100px;	
 	padding: 1%;
 }
 
 .project a{
-	width:max-content;
 	color:#D98880;
 	padding: 1% 1%;	
 }
@@ -69,14 +91,16 @@ a:hover{
 .project h1,h5{
 	margin:0;
 	padding:1% 1%;
+	width:fit-content;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+
 .resume{
 	background-image:url('./images/resume.jpg');
-	margin:auto;
 	border:1px solid black;
+	margin:0 30%;
 }
 
 .contact-form{
