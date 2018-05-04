@@ -72,11 +72,13 @@ class Projects extends Component{
 
 	projectContainer = () => {
 		const { projectIndex } = this.props.projectInfo;
+		const { innerHeight,innerWidth } = this.props.view;
 		let Proj = projectOptions[projectIndex];
+		let scale = .7;
 		return <div className = 'project'>
 			<h1> {Proj.title} </h1>
 			<h5> {Proj.subTitle} </h5>
-			<img id = {Proj.id} src = {Proj.img} height ='300' width = '500' />	
+			<img id = {Proj.id} src = {Proj.img} height = {((innerHeight/8)*5)*scale} width = {innerHeight*scale}/>	
 			<span id = 'testing-span'>
 			<ul>
 				<li>Status : In Production but still developing.</li>
@@ -105,6 +107,7 @@ class Projects extends Component{
 const mapStateToProps = (state) => {
 	return{
 		projectInfo:state.projectInfo,
+		view:state.view,
 	}
 }
 
