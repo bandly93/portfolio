@@ -1,20 +1,23 @@
-.home-div {
+.home-div,.portfolio-div{
 	text-align:center;
+	width:100%;
+	height:50vh;
+}
+
+.home-div p,.portfolio-div p{
+	padding:0 25%;
+	
+}
+
+.home-div {
 	color:white;
 }
 
 .portfolio-div{
 	background:white;
-	width :100%;
 	color:black;
-	padding:10% 0;
 }
 
-.portfolio-div p{
-	margin:0 25%;
-	padding:5%;
-
-}
 
 #volcano-gif{
 	content: url('./images/testing.gif');
@@ -86,7 +89,7 @@ a:hover{
 .project{
 	border-radius:10px;
 	background-color:white;
-	width:1075px;	
+	width:80vw;	
 	padding: 1%;
 }
 

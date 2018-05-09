@@ -16,15 +16,22 @@ class Home extends Component{
 	}	
 		
 	banner = () => {
-		return <div className ='home-div'>
-			<h1> Little About Me </h1>
-			<p> Self-taught freelance web developer. Majored in Business Management but passionate in problem solving, which then lead me to pursue computer science.</p>
+		return <div>
+			<h1> A Little About Me... </h1>
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 	}
 
 	siteInformationSlide = () => {	
 		return homeOptions.map(({},i) => (
-			<p key = {i} className = 'slideDiv'>{homeOptions[i].text}</p>	
+			<div key = {i} className = 'slideDiv'>
+				{homeOptions[i].text}
+				{homeOptions[i].images.map(({},j)=>(
+					<li key = {j}>{j}</li>
+
+				))}
+				
+			</div>
 			)
 		)
 	}
@@ -49,13 +56,15 @@ class Home extends Component{
 	}
 
 	render(){
-		return<div className = 'home-div'>
-			{this.banner()}
+		return<Fragment>
+			<div className = 'home-div'>
+				{this.banner()}
+			</div>
 			<div className = 'portfolio-div'>
 				<h1> My Portfolio ... </h1>
 				{this.siteInformationSlide()}
 			</div>
-		</div>
+		</Fragment>
 	}
 }
 
