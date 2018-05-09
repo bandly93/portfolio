@@ -1,5 +1,11 @@
+.home-div {
+	text-align:center;
+	color:white;
+}
+
+
 #volcano-gif{
-	background-image: url('./images/testing.gif');
+	content: url('./images/testing.gif');
 }
 
 #logo-span{
@@ -22,7 +28,7 @@ body {
 	color:black;
   margin: 0;
   font-family: Rubik;
-	background:url('./images/background.jpg');
+	background-image:url('./images/background.jpg');
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
