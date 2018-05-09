@@ -3,6 +3,18 @@
 	color:white;
 }
 
+.portfolio-div{
+	background:white;
+	width :100%;
+	color:black;
+	padding:10% 0;
+}
+
+.portfolio-div p{
+	margin:0 25%;
+	padding:5%;
+
+}
 
 #volcano-gif{
 	content: url('./images/testing.gif');
