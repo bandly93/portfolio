@@ -12,30 +12,31 @@ class NavBar extends Component{
 	)
 
 	list = () => {
-		 return <ul> 
-			<span id = 'logo-span'>
+		return <Fragment> 
+			<span className = 'span-items'>
 				<Link to = '/'> <img id = 'logo' src = './images/logo.jpg'/></Link>
 			</span>
 			<span className = 'span-items'>
-				<li><Link to = '/contact'> CONTACT </Link></li>
-				<li><Link to = '/projects'> PROJECTS </Link></li>
-				<li><Link to = '/prof_docs'> RESUME </Link></li>
+				<Link to = '/projects'> PROJECTS </Link>
+				<Link to = '/contact'> CONTACT </Link>
+				<Link to = '/prof_docs'> RESUME </Link>
 			</span>
 			<span className = 'span-items'>
-				<li><a href = '//www.github.com/bandly93' target = '_blank'> GITHUB </a></li>
-				<li><a href = '//www.linkedin.com/in/band-l-245493b6/' target = '_blank'> LINKEDIN </a></li>
+				<Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link>
+				<Link to = '//www.linkedin.com/in/band-l-245493b6/' target = '_blank'> LINKEDIN </Link>
 			</span>
-
-		</ul>
+		</Fragment>
 	}
 
 	render(){
-		return <div className = 'navbar'>
-			{this.list()}
+		return <Fragment>
+			<div className = 'navbar'>
+				{this.list()}
+			</div>
 			<Switch>
 				{this.routes()}
 			</Switch>
-		</div>
+		</Fragment>
 	}
 }
 

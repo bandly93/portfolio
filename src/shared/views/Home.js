@@ -15,22 +15,20 @@ class Home extends Component{
 		slides.length > 1 && !this.state.interval ? this.carousel(index):null	
 	}	
 		
-	banner = () => {
-		return <div>
+	intro = () => {
+		return <Fragment>
 			<h1> A Little About Me... </h1>
 			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
+		</Fragment>
 	}
 
 	siteInformationSlide = () => {	
 		return homeOptions.map(({},i) => (
 			<div key = {i} className = 'slideDiv'>
-				{homeOptions[i].text}
+				<p>{homeOptions[i].text}</p>
 				{homeOptions[i].images.map(({},j)=>(
-					<li key = {j}>{j}</li>
-
+					<img key = {j} src = {homeOptions[i].images[j]}/>
 				))}
-				
 			</div>
 			)
 		)
@@ -50,21 +48,24 @@ class Home extends Component{
 		
 		x[index-1].style.display = 'block';
 		setTimeout(()=>clearInterval(this.carousel(index)),8000);
-		var d = new Date();
-		console.log(d.getSeconds());
+
+		/* TEST */
+		
+		//var d = new Date();
+		//console.log(d.getSeconds());
 		
 	}
 
 	render(){
-		return<Fragment>
-			<div className = 'home-div'>
-				{this.banner()}
+		return<div className = 'homepage'>
+			<div className = 'intro-div'>
+				{this.intro()}
 			</div>
 			<div className = 'portfolio-div'>
 				<h1> My Portfolio ... </h1>
 				{this.siteInformationSlide()}
 			</div>
-		</Fragment>
+		</div>
 	}
 }
 

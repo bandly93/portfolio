@@ -1,15 +1,59 @@
-.home-div,.portfolio-div{
+ul,div{
+	list-style-type:none;
+	-webkit-padding-start: 0;
+}
+
+body,html {
+	color:black;
+  font-family: Rubik;
+	background-image:url('./images/background.jpg');
+	margin:0;
+	padding:0;
+}
+
+a{
+	color:black;
+	text-decoration:none;
+	padding: 0 2%;
+}
+
+a:hover{
+	color:red;
+	cursor:pointer;
+}
+
+/*~~~~~~~~~~~~~~~~~~NAVBAR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.navbar{
+	background-color:white;
+	display:inline-flex;
 	text-align:center;
 	width:100%;
-	height:50vh;
+	justify-content:space-around;
 }
 
-.home-div p,.portfolio-div p{
-	padding:0 25%;
-	
+.navbar span{
+	margin:auto 2%;	
 }
 
-.home-div {
+#logo{
+	content:url('./images/logo.jpg');
+	background-repeat : no-repeat;
+	padding-right: 25%;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.homepage{
+	text-align:center;
+	width:100vw;
+	height:100vh;
+}
+
+.homepage p{
+	padding: 0 25%;
+}
+.intro-div {
 	color:white;
 }
 
@@ -17,14 +61,15 @@
 	background:white;
 	color:black;
 }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+
+
 
 
 #volcano-gif{
 	content: url('./images/testing.gif');
-}
-
-#logo-span{
-	padding: 0 3% 0 0;
 }
 
 #testing-span{
@@ -39,50 +84,7 @@
 	text-align:left;
 }
 
-body {
-	color:black;
-  margin: 0;
-  font-family: Rubik;
-	background-image:url('./images/background.jpg');
-}
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.navbar a{
-	color:black;
-	text-decoration:none;
-}
-
-a:hover{
-	color:red;
-}
-
-.navbar ul{
-	margin-top:0;
-	padding-left:0;
-	background-color:white;
-	list-style-type:none;
-	display:inline-flex;
-	text-align:center;
-	width:100%;
-	justify-content:space-around;
-}
-
-.navbar span{
-	margin:auto 2%;
-}
-
-.span-items li {
-	padding:0 10px;	
-}
-
-#logo{
-	content:url('./images/logo.jpg');
-	background-repeat : no-repeat;
-	padding: 0 25% 0 0;
-}
-#logo:hover{
-	cursor:pointer;
-}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -91,16 +93,6 @@ a:hover{
 	background-color:white;
 	width:80vw;	
 	padding: 1%;
-}
-
-.project a{
-	color:#D98880;
-	padding: 1% 1%;	
-}
-
-.project a:hover {
-	color:black;
-
 }
 
 .project h1{
@@ -141,9 +133,7 @@ a:hover{
 	flex-direction:column;
 }
 
-span{
-	display:inline-flex;
-}
+
 
 .error {
 	border:2px solid red;
@@ -240,3 +230,30 @@ input, textarea{
 	justify-content:space-between;
 	width:100%;
 }
+
+/* mobile phones */
+@media only screen 
+	and (min-device-width:320px) 
+	and (max-device-width:480px){	
+	
+	#myNavBar ul{
+		background:red;
+		float:right;
+		display:block;
+	}
+}
+
+/* tablets */
+@media only screen 
+	and (min-device-width:768px) 
+	and (max-device-width:1024px){
+	
+	#myNavBar ul{
+		background:green;
+		flex-direction:column;
+	}
+}
+
+
+
+
