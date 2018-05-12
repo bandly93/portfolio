@@ -7,11 +7,6 @@ module.exports = merge(common,{
 	entry: {
 		client: ['./src/client/index.js','./src/shared/style.css'],	
 	},
-	output : {
-		filename: '[name]-bundle.js',
-		path: path.resolve(__dirname,'dist'),
-		publicPath: '/',
-	},
 	mode:'development',
 	devtool : 'inline-source-map',
 	devServer: {

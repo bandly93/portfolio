@@ -1,4 +1,3 @@
-const path = require('path');
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
@@ -14,26 +13,7 @@ module.exports = env => {
     entry: {
 			client: ['./src/client/index.js','./src/shared/style.css'],	
 		},
-		mode:'production',
-		output : {
-			filename: '[name]-bundle.js',
-			path: path.resolve(__dirname,'dist'),
-			publicPath: '/',
-		},
-		devServer: {
-			contentBase : 'dist',
-			publicPath : '/',
-			overlay:true,
-    	inline: true,
-  	  port: 8080, 
-  	  proxy: {
-    		'**': {
-      		target: 'http://[::1]:3000',
-       		changeOrigin: true,
-       	  secure:false
-      	}
-    	}
-  	},
+    mode:'production',
 		plugins: [
 			new OptimizeCssAssetsPlugin({
 				assetNameRegExp: /\.css$/g,
