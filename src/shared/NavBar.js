@@ -13,18 +13,20 @@ class NavBar extends Component{
 
 	list = () => {
 		return <Fragment> 
-			<span className = 'span-items'>
+			<div className = 'span-items'>
 				<Link to = '/'> <img id = 'logo' src = './images/logo.jpg'/></Link>
-			</span>
-			<span className = 'span-items'>
+			</div>
+      <div className = 'annoying-span'>
+			<div className = 'span-items'>
 				<Link to = '/projects'> PROJECTS </Link>
 				<Link to = '/contact'> CONTACT </Link>
 				<Link to = '/prof_docs'> RESUME </Link>
-			</span>
-			<span className = 'span-items'>
+			</div>
+			<div className = 'span-items'>
 				<Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link>
 				<Link to = '//www.linkedin.com/in/band-l-245493b6/' target = '_blank'> LINKEDIN </Link>
-			</span>
+			</div>
+      </div>
 		</Fragment>
 	}
 

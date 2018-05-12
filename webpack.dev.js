@@ -1,8 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const merge = require('webpack-merge');
+const common = require('./webpack.common.js');
 
-module.exports = {
+module.exports = merge(common,{
 	entry: {
 		client: ['./src/client/index.js','./src/shared/style.css'],	
 	},
@@ -27,34 +28,10 @@ module.exports = {
       }
     }
   },
-	module: {
-    rules: [
-      {
-        test: /\.(js|jsx)?$/,
-        exclude: /node_modules/,
-        use: [ { loader: "babel-loader"} ]
-      },
-      {
-        test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					fallback:'style-loader',
-					use:[ { loader: 'css-loader' } ]
-				})
-      },
-      {
-        test: /\.(jpg|png|gif)$/,
-        use: [ { loader: "file-loader", options: { name: "images/[name].[ext]" } } ]
-      }, 
-    ]
-  },
 	plugins: [
 		new webpack.DefinePlugin({
 			__isBrowser__ : 'true'
 		}),
 		new webpack.NamedModulesPlugin(),
-		new ExtractTextPlugin({
-			filename : '[name]-bundle.css',
-			allChunks:true
-		}),
 	]
-}
+});

@@ -24,6 +24,15 @@ a:hover{
 
 /*~~~~~~~~~~~~~~~~~~NAVBAR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+.annoying-span{
+  display:flex;
+}
+
+.annoying-span div{
+  margin:10%;
+}
+
+
 .navbar{
 	background-color:white;
 	display:inline-flex;
@@ -32,17 +41,17 @@ a:hover{
 	justify-content:space-around;
 }
 
-.navbar span{
-	margin:auto 2%;	
+.navbar div{
+	margin:auto;
+  flex:1;
 }
 
 #logo{
 	content:url('./images/logo.jpg');
 	background-repeat : no-repeat;
-	padding-right: 25%;
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~homepage~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .homepage{
 	text-align:center;
@@ -63,11 +72,6 @@ a:hover{
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-
-
-
-
-
 #volcano-gif{
 	content: url('./images/testing.gif');
 }
@@ -75,6 +79,7 @@ a:hover{
 #testing-span{
 	position:absolute;
 }
+
 #testing-span ul {
 	display:inline-block;
 }
@@ -84,46 +89,23 @@ a:hover{
 	text-align:left;
 }
 
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-.project{
-	border-radius:10px;
-	background-color:white;
-	width:80vw;	
-	padding: 1%;
-}
-
-.project h1{
-	font-size:48px;
-}
-
-.project h1,h5{
-	margin:0;
-	padding:1% 1%;
-	width:fit-content;
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
+/* ~~~~~~~~~~~~~~~Resume ~~~~~~~~~~ */
 
 .resume{
 	background-image:url('./images/resume.jpg');
+  width:100%;
 	border:1px solid black;
-	margin:0 30%;
 }
 
+/* ~~~~~~~~~~~~~~~~~~Contact Form~~~~~~~~~~~~~~~~~~~*/
+
 .contact-form{
-	width:30%;
-	color:#17252A;
+	width:70vw;
 	background-color:white;
 	text-align:center;
-	display:flex;
 	margin:3% auto 0 auto;
 	border-radius:5px;
 	line-height:1;
-	flex-direction:column;
 	padding:2% 5%;
 	box-shadow: 5px 5px 5px grey;
 }
@@ -132,8 +114,6 @@ a:hover{
 	display:flex;
 	flex-direction:column;
 }
-
-
 
 .error {
 	border:2px solid red;
@@ -183,6 +163,24 @@ input, textarea{
 	margin-top:10px;
 	text-indent:0;
 }
+/*~~~~~~~~~~~~~~~Projects~~~~~~~~~~~~~~~~~~*/
+
+.project{
+	border-radius:10px;
+	background-color:white;
+	width:80vw;	
+	padding: 1%;
+}
+
+.project h1{
+	font-size:48px;
+}
+
+.project h1,h5{
+	margin:0;
+	padding:1% 1%;
+	width:fit-content;
+}
 
 #carousel-indicator{
 	background-color:transparent;
@@ -231,29 +229,27 @@ input, textarea{
 	width:100%;
 }
 
-/* mobile phones */
-@media only screen 
-	and (min-device-width:320px) 
-	and (max-device-width:480px){	
-	
-	#myNavBar ul{
-		background:red;
-		float:right;
-		display:block;
-	}
+
+
+/*~~~~~~~~~~~~~~~~~~~media queries ~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~Mobile view ~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width:812px){
+  .span-items:not(:first-child){
+    
+  }
+
+  .navbar div:not(:first-child){
+    display:inline-grid;
+    
+
+
+
+
+
+
+
+
+
+
+  }
 }
-
-/* tablets */
-@media only screen 
-	and (min-device-width:768px) 
-	and (max-device-width:1024px){
-	
-	#myNavBar ul{
-		background:green;
-		flex-direction:column;
-	}
-}
-
-
-
-
