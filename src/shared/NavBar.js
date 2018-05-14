@@ -11,30 +11,41 @@ class NavBar extends Component{
 		/>
 	)
 
-	list = () => {
-		return <Fragment> 
-			<div className = 'span-items'>
-				<Link to = '/'> <img id = 'logo' src = './images/logo.jpg'/></Link>
-			</div>
-      <div className = 'annoying-span'>
-			<div className = 'span-items'>
-				<Link to = '/projects'> PROJECTS </Link>
-				<Link to = '/contact'> CONTACT </Link>
-				<Link to = '/prof_docs'> RESUME </Link>
-			</div>
-			<div className = 'span-items'>
-				<Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link>
-				<Link to = '//www.linkedin.com/in/band-l-245493b6/' target = '_blank'> LINKEDIN </Link>
-			</div>
+	navbar = () => {
+		return <nav> 
+      <div className = 'navbar' id = 'navbar-primary'>
+			  <div>
+			    <Link to = '/'> <img id = 'logo' src = './images/logo.jpg'/></Link>
+			  </div>
+			  <div>
+			  	<Link to = '/projects'> PROJECTS </Link>
+			  	<Link to = '/contact'> CONTACT </Link>
+			  	<Link to = '/prof_docs'> RESUME </Link>
+        </div>
+        <div>
+		  		<Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link>
+		  		<Link to = '//www.linkedin.com/in/band-l-245493b6/' target = '_blank'> LINKEDIN </Link>
+	      </div>
       </div>
-		</Fragment>
+      
+      <div className = 'navbar' id = 'navbar-secondary' style = {{display:"none"}}>
+			  <div>
+			    <Link to = '/'> <img id = 'logo' src = './images/logo.jpg'/></Link>
+			  </div>
+			  <div>
+			  	<Link to = '/projects'> PROJECTS </Link>
+			  	<Link to = '/contact'> CONTACT </Link>
+			  	<Link to = '/prof_docs'> RESUME </Link>
+		  		<Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link>
+		  		<Link to = '//www.linkedin.com/in/band-l-245493b6/' target = '_blank'> LINKEDIN </Link>
+	      </div>
+      </div> 
+		</nav>
 	}
 
 	render(){
 		return <Fragment>
-			<div className = 'navbar'>
-				{this.list()}
-			</div>
+				{this.navbar()}
 			<Switch>
 				{this.routes()}
 			</Switch>

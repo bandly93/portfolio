@@ -8,13 +8,12 @@ body,html {
   font-family: Rubik;
 	background-image:url('./images/background.jpg');
 	margin:0;
-	padding:0;
 }
 
 a{
 	color:black;
 	text-decoration:none;
-	padding: 0 2%;
+	padding: 0 0.5vw;
 }
 
 a:hover{
@@ -23,16 +22,6 @@ a:hover{
 }
 
 /*~~~~~~~~~~~~~~~~~~NAVBAR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-.annoying-span{
-  display:flex;
-}
-
-.annoying-span div{
-  margin:10%;
-}
-
-
 .navbar{
 	background-color:white;
 	display:inline-flex;
@@ -42,14 +31,15 @@ a:hover{
 }
 
 .navbar div{
-	margin:auto;
-  flex:1;
+  display:inline-flex;
+  margin: auto 0;
 }
 
 #logo{
 	content:url('./images/logo.jpg');
 	background-repeat : no-repeat;
 }
+
 
 /*~~~~~~~~~~~~~~~~~~~~~~~homepage~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -234,22 +224,8 @@ input, textarea{
 /*~~~~~~~~~~~~~~~~~~~media queries ~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~Mobile view ~~~~~~~~~~~~~~~~*/
 @media only screen and (max-width:812px){
-  .span-items:not(:first-child){
-    
-  }
-
-  .navbar div:not(:first-child){
-    display:inline-grid;
-    
-
-
-
-
-
-
-
-
-
-
-  }
+     
 }
+
+
+
