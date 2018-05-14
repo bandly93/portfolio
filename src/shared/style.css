@@ -8,6 +8,7 @@ body,html {
   font-family: Rubik;
 	background-image:url('./images/background.jpg');
 	margin:0;
+	padding: 0;
 }
 
 a{
@@ -31,15 +32,19 @@ a:hover{
 }
 
 .navbar div{
-  display:inline-flex;
   margin: auto 0;
+}
+
+@media only screen and (min-width:811px){
+	#navbar-secondary{
+		display:none;
+	}
 }
 
 #logo{
 	content:url('./images/logo.jpg');
 	background-repeat : no-repeat;
 }
-
 
 /*~~~~~~~~~~~~~~~~~~~~~~~homepage~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -224,7 +229,13 @@ input, textarea{
 /*~~~~~~~~~~~~~~~~~~~media queries ~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~Mobile view ~~~~~~~~~~~~~~~~*/
 @media only screen and (max-width:812px){
-     
+	#navbar-primary{
+		display:none;
+	}
+	#navbar-secondary div{
+		display:inline-grid;
+	}
+	 
 }
 
 

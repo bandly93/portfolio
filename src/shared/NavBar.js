@@ -28,7 +28,7 @@ class NavBar extends Component{
 	      </div>
       </div>
       
-      <div className = 'navbar' id = 'navbar-secondary' style = {{display:"none"}}>
+      <div className = 'navbar' id = 'navbar-secondary'>
 			  <div>
 			    <Link to = '/'> <img id = 'logo' src = './images/logo.jpg'/></Link>
 			  </div>
