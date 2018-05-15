@@ -12,9 +12,17 @@ class Home extends Component{
 	componentDidMount(){
 		let index = 0;
 		let slides = document.getElementsByClassName('slideDiv');
-		slides.length > 1 && !this.state.interval ? this.carousel(index):null	
+		this.setState({interval:true},()=>{
+			slides.length > 1 ? this.carousel(index):null
+		})
 	}
 
+	componentWillUnmount(){
+		this.setState({interval:false},()=>{
+			clearInterval(this.carousel())
+		})	
+	}
+	
 	intro = () => {
 		return <Fragment>
 			<h1> A Little About Me... </h1>
@@ -35,25 +43,23 @@ class Home extends Component{
 	}
 
 	carousel = (index) => {
-		let i;
-		this.setState({interval:true});
 		let x = document.getElementsByClassName('slideDiv');
-		for ( i = 0 ; i < x.length ; i++){
-			x[i].style.display = 'none';
-		}
-		index++
-		if(index > x.length) {
-			index = 1;
-		}
-		
-		x[index-1].style.display = 'block';
-		setTimeout(()=>clearInterval(this.carousel(index)),8000);
+		if(x.length > 0){
+			for ( let i = 0 ; i < x.length ; i++){
+				x[i].style.display = 'none';
+			}
+			index++
+			if(index > x.length) {
+				index = 1;
+			}
+			
+			x[index-1].style.display = 'block';
+			setTimeout(()=>this.carousel(index),8000);
 
-		/* TEST */
-		
-		//var d = new Date();
-		//console.log(d.getSeconds());
-		
+				/* TEST */
+			var d = new Date();
+			console.log(d.getSeconds());
+		}
 	}
 
 	render(){
