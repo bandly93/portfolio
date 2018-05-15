@@ -1,6 +1,9 @@
 import React, { Component,Fragment } from 'react';
 import { RoutesArray } from './data/routeOptions.js';
 import { BrowserRouter as Router,Route,Link,Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { toggleNav } from './redux/navbarModule.js';
+import { withRouter } from 'react-router-dom'
 
 class NavBar extends Component{
 
@@ -10,6 +13,12 @@ class NavBar extends Component{
 			key = {i} 
 		/>
 	)
+
+	toggleNav = () => {
+
+		console.log('hello');
+
+	}
 
 	navbar = () => {
 		return <nav> 
@@ -27,12 +36,12 @@ class NavBar extends Component{
 		  		<Link to = '//www.linkedin.com/in/band-l-245493b6/' target = '_blank'> LINKEDIN </Link>
 	      </div>
       </div>
-      
       <div className = 'navbar' id = 'navbar-secondary'>
 			  <div>
 			    <Link to = '/'> <img id = 'logo' src = './images/logo.jpg'/></Link>
-			  </div>
-			  <div>
+			  </div>	
+				<img src = './images/hamburger.svg' id = 'hamburger-icon' onClick = {this.toggleNav}/>
+			  <div style = {{display:'none'}}>
 			  	<Link to = '/projects'> PROJECTS </Link>
 			  	<Link to = '/contact'> CONTACT </Link>
 			  	<Link to = '/prof_docs'> RESUME </Link>
@@ -53,4 +62,17 @@ class NavBar extends Component{
 	}
 }
 
-export default NavBar;
+const mapStateToProps = (state) => {
+	return{
+		navbar:state.navbarState,
+	}
+}
+
+const mapDispatchToProps = (dispatch) => {
+	return{
+		toggleNav:(data)=>dispatch(toggleNav(data)),
+	}
+}
+
+
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(NavBar));

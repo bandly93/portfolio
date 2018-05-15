@@ -13,8 +13,8 @@ class Home extends Component{
 		let index = 0;
 		let slides = document.getElementsByClassName('slideDiv');
 		slides.length > 1 && !this.state.interval ? this.carousel(index):null	
-	}	
-		
+	}
+
 	intro = () => {
 		return <Fragment>
 			<h1> A Little About Me... </h1>
