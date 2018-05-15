@@ -40,6 +40,11 @@ a:hover{
   margin: auto 0;
 }
 
+#logo{
+	content:url('./images/logo.jpg');
+	background-repeat : no-repeat;
+}
+
 @media only screen and (min-width:811px){
 	#navbar-secondary{
 		display:none;
@@ -50,12 +55,23 @@ a:hover{
 
 	}
 }
+			/*Mobile view */
+@media only screen and (max-width:812px){
+	#navbar-primary{
+		display:none;
+	}
+	#navbar-secondary{
+		justify-content:space-between;
+	}
+	
+	.on{
+		display:inline-grid;
+	}
 
-#logo{
-	content:url('./images/logo.jpg');
-	background-repeat : no-repeat;
+	.off{
+		display:none;
+	} 
 }
-
 /*~~~~~~~~~~~~~~~~~~~~~~~homepage~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .homepage{
@@ -235,21 +251,6 @@ input, textarea{
 }
 
 
-
-/*~~~~~~~~~~~~~~~~~~~media queries ~~~~~~~~~~~~~~~*/
-/*~~~~~~~~~~~~~~~~~~~Mobile view ~~~~~~~~~~~~~~~~*/
-@media only screen and (max-width:812px){
-	#navbar-primary{
-		display:none;
-	}
-	#navbar-secondary div{
-		display:inline-grid;
-	}
-	#navbar-secondary{
-		justify-content:space-between;
-	}
-	 
-}
 
 
 

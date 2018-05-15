@@ -1,7 +1,7 @@
 export const TOGGLE_NAV = 'TOGGLE_NAV';
 
 let initialState = {
-	active:false,
+	clicked:false,
 
 }
 

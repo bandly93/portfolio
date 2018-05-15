@@ -16,7 +16,7 @@ class NavBar extends Component{
 
 	navbar = () => {
 		const { toggleNav } = this.props;
-		const { active } = this.props.navbar;
+		const { clicked } = this.props.navbar;
 		return <nav> 
       <div className = 'navbar' id = 'navbar-primary'>
 			  <div>
@@ -37,17 +37,17 @@ class NavBar extends Component{
 			    <Link to = '/'> 
 						<img id = 'logo' 
 							src = './images/logo.jpg'
-							onClick = {() => toggleNav({active:false})}
+							onClick = {() => toggleNav({clicked:false})}
 						/>
 					</Link>
 			  </div>
 				<div>	
-					<img style = {active?{display:'none'}:null}
+					<img className = {clicked?'off':'on'}
 						src = './images/hamburger.svg' 
 						id = 'hamburger-icon' 
-						onClick = {()=>toggleNav({active:true})}/>
+						onClick = {() => toggleNav({clicked:true})}/>
 				</div>
-			  <div style = {active?{display:'inline-grid'}:{display:'none'}} onClick = {()=>toggleNav({active:false})}>
+			  <div className = {clicked?'on':'off'} onClick = {()=>toggleNav({clicked:false})}>
 			  	<Link to = '/projects'> PROJECTS </Link>
 			  	<Link to = '/contact'> CONTACT </Link>
 			  	<Link to = '/prof_docs'> RESUME </Link>
@@ -59,6 +59,7 @@ class NavBar extends Component{
 	}
 
 	render(){
+		console.log(this.props.navbar.clicked);
 		return <Fragment>
 				{this.navbar()}
 			<Switch>
