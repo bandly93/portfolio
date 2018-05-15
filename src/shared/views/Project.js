@@ -79,7 +79,7 @@ class Projects extends Component{
 			<h1> {Proj.title} </h1>
 			<h5> {Proj.subTitle} </h5>
 			<img id = {Proj.id} src = {Proj.img} width = {innerWidth*scale} height = {((innerWidth / 8) *5 )*scale} />	
-			<span id = 'testing-span'>
+			<span id = 'proj-desc'>
 			<ul>
 				<li>Status : In Production but still developing.</li>
 				<li>Technologies : React, Redux, Webpack, Node, MongoDB, Express.</li>

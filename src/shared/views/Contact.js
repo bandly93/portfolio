@@ -42,32 +42,32 @@ class Contact extends Component{
 			<h1> Contact Form </h1>
 			<p> Got a question? I would love to hear from you. Send me a message and I will get back to you as soon as possible.</p>
 			<form onSubmit = {this.sendEmail}>
-				<p>Name</p>
 				<input 
 					className = 'input-name'
+					placeholder = 'name'
 					autoComplete = 'off'
 					type = 'text' 
 					name = 'name'
 					value = {name}
 					onChange = {this.onFormChange} />
-				<p>Email</p>
 				<input 
+					placeholder = 'email'
 					className = 'input-email'
 					autoComplete = 'off'
 					type = 'email' 
 					name = 'email'
 					value = {email} 
 					onChange = {this.onFormChange} />
-				<p>Subject</p>
 				<input 
+					placeholder = 'subject'
 					className = 'input-subject'
 					type = 'text' 
 					name = 'subject' 
 					value = {subject} 
 					onChange = {this.onFormChange} />
-				<p>Message</p> 
 				<textarea
-					rows = '12' 
+					rows = '4'
+					placeholder = 'your message here' 
 					className = 'textarea-message'
 					name = 'message' 
 					value = {message} 
@@ -75,7 +75,8 @@ class Contact extends Component{
 				<input 
 					type = 'submit' 
 					className = 'button'
-					disabled = {shouldBeDisabled} />
+					disabled = {shouldBeDisabled} 
+					/>
 			</form>
 		</div>
 	}	

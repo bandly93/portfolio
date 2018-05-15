@@ -45,7 +45,7 @@ a:hover{
 	background-repeat : no-repeat;
 }
 
-@media only screen and (min-width:811px){
+@media only screen and (min-width:813px){
 	#navbar-secondary{
 		display:none;
 	}
@@ -67,7 +67,6 @@ a:hover{
 	.on{
 		display:inline-grid;
 	}
-
 	.off{
 		display:none;
 	} 
@@ -97,31 +96,58 @@ a:hover{
 	content: url('./images/testing.gif');
 }
 
-#testing-span{
+#proj-desc{
 	position:absolute;
 }
 
-#testing-span ul {
+#proj-desc ul {
 	display:inline-block;
 }
 
-#testing-span li{
+#proj-desc li{
 	list-style-type:circle;
 	text-align:left;
 }
+@media only screen and (max-width:812px){
+	#proj-desc{
+		position:inherit;
+	}
+}
 
 /* ~~~~~~~~~~~~~~~Resume ~~~~~~~~~~ */
+@media only screen and (max-width:812px){
+	.resume{
+  	width:90%;
+		margin:2% 5%;
+	}
+}
 
-.resume{
-	background-image:url('./images/resume.jpg');
-  width:100%;
+@media only screen and (min-width:813px){
+	.resume{
+  	width:70%;
+		margin:2% 15%;
+	}
+}
+
+.resume{	
+	background-image:url('./images/resume.jpg');	
 	border:1px solid black;
 }
 
 /* ~~~~~~~~~~~~~~~~~~Contact Form~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width:812px){
+	.contact-form{
+		width:70vw;
+	}
+}
+
+@media only screen and (min-width:813px){
+	.contact-form{
+		width: 50vw;
+	}
+}
 
 .contact-form{
-	width:70vw;
 	background-color:white;
 	text-align:center;
 	margin:3% auto 0 auto;

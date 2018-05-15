@@ -59,7 +59,6 @@ class NavBar extends Component{
 	}
 
 	render(){
-		console.log(this.props.navbar.clicked);
 		return <Fragment>
 				{this.navbar()}
 			<Switch>
