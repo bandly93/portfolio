@@ -43,22 +43,25 @@ class Home extends Component{
 	}
 
 	carousel = (index) => {
-		let x = document.getElementsByClassName('slideDiv');
-		if(x.length > 0){
-			for ( let i = 0 ; i < x.length ; i++){
-				x[i].style.display = 'none';
+		let slides = document.getElementsByClassName('slideDiv');
+		if(slides.length > 0){
+			for ( let i = 0 ; i < slides.length ; i++){
+				slides[i].style.display = 'none';
 			}
 			index++
-			if(index > x.length) {
+			if(index > slides.length) {
 				index = 1;
 			}
 			
-			x[index-1].style.display = 'block';
+			slides[index-1].style.display = 'block';
 			setTimeout(()=>this.carousel(index),8000);
 
 				/* TEST */
+
+			/*
 			var d = new Date();
 			console.log(d.getSeconds());
+			*/
 		}
 	}
 

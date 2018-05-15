@@ -5,7 +5,7 @@ let initialState = {
 
 }
 
-export const toggleMenu = (data) => {
+export const toggleNav = (data) => {
 	return{
 		type:TOGGLE_NAV,
 		data

@@ -14,13 +14,9 @@ class NavBar extends Component{
 		/>
 	)
 
-	toggleNav = () => {
-
-		console.log('hello');
-
-	}
-
 	navbar = () => {
+		const { toggleNav } = this.props;
+		const { active } = this.props.navbar;
 		return <nav> 
       <div className = 'navbar' id = 'navbar-primary'>
 			  <div>
@@ -38,10 +34,20 @@ class NavBar extends Component{
       </div>
       <div className = 'navbar' id = 'navbar-secondary'>
 			  <div>
-			    <Link to = '/'> <img id = 'logo' src = './images/logo.jpg'/></Link>
-			  </div>	
-				<img src = './images/hamburger.svg' id = 'hamburger-icon' onClick = {this.toggleNav}/>
-			  <div style = {{display:'none'}}>
+			    <Link to = '/'> 
+						<img id = 'logo' 
+							src = './images/logo.jpg'
+							onClick = {() => toggleNav({active:false})}
+						/>
+					</Link>
+			  </div>
+				<div>	
+					<img style = {active?{display:'none'}:null}
+						src = './images/hamburger.svg' 
+						id = 'hamburger-icon' 
+						onClick = {()=>toggleNav({active:true})}/>
+				</div>
+			  <div style = {active?{display:'inline-grid'}:{display:'none'}} onClick = {()=>toggleNav({active:false})}>
 			  	<Link to = '/projects'> PROJECTS </Link>
 			  	<Link to = '/contact'> CONTACT </Link>
 			  	<Link to = '/prof_docs'> RESUME </Link>
@@ -68,10 +74,8 @@ const mapStateToProps = (state) => {
 	}
 }
 
-const mapDispatchToProps = (dispatch) => {
-	return{
-		toggleNav:(data)=>dispatch(toggleNav(data)),
-	}
+const mapDispatchToProps = {
+	toggleNav,
 }
 
 
