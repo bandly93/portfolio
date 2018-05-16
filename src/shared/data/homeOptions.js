@@ -1,4 +1,4 @@
-export const ph = 'http://placeholder.pics/svg/200x100/8C9FFF-FF8351/4AFFC3-8788FF/Placeholder'
+export const ph = ''
 
 export const homeOptions = [
 	{
