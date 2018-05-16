@@ -31,10 +31,17 @@ module.exports = env => {
 			new CompressionPlugin({
 				asset : '[path].gz[query]',
 				algorithm : 'gzip',
-				test : /\.js$|\.css$|\.html$/,
+				test : /\.(js|css|html|svg|jpg|png|gif)$/,
 				minRatio:1,
 			}),
-			new BrotliPlugin(),
+			new BrotliPlugin({
+				asset : '[path].br[query]',
+				algorithm:'brolti',
+				test : /\.(js|css|html|svg|jpg|png|gif)$/,
+				threshold:0,
+				minRatio:1,
+				quality: 11,
+			}),
   	]
   })
 }
