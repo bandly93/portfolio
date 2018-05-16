@@ -60,6 +60,7 @@ a:hover{
 	#navbar-primary{
 		display:none;
 	}
+
 	#navbar-secondary{
 		justify-content:space-between;
 	}
@@ -92,27 +93,6 @@ a:hover{
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-#volcano-gif{
-	content: url('./images/testing.gif');
-}
-
-#proj-desc{
-	position:absolute;
-}
-
-#proj-desc ul {
-	display:inline-block;
-}
-
-#proj-desc li{
-	list-style-type:circle;
-	text-align:left;
-}
-@media only screen and (max-width:812px){
-	#proj-desc{
-		position:inherit;
-	}
-}
 
 /* ~~~~~~~~~~~~~~~Resume ~~~~~~~~~~ */
 @media only screen and (max-width:812px){
@@ -238,8 +218,6 @@ input, textarea{
 .carousel-indicator-item{
 	padding:0;
 	background-color:white;
-	width:0.5vw;
-	height:0.5vw;
 	padding:5px;
 	margin:0.4%;
 	cursor: pointer;
@@ -256,15 +234,13 @@ input, textarea{
 	color:white;
 	background:transparent;
 	border:none;
-	font-size:40px;
-	height:fit-content;
+	font-size:5vw;
 	margin: auto;
 }
 
 .proj-button:hover {
-	color:black;
+	color:grey;
 	cursor:pointer;
-
 }
 .proj-button:focus {
 	outline:0;
@@ -274,6 +250,28 @@ input, textarea{
 	display:inline-flex;
 	justify-content:space-between;
 	width:100%;
+}
+
+#volcano-gif{
+	content: url('./images/testing.gif');
+}
+
+#proj-desc{
+	position:absolute;
+}
+
+#proj-desc ul {
+	display:inline-block;
+	padding: 0 5%;
+}
+
+#proj-desc li{
+	list-style-type:circle;
+}
+@media only screen and (max-width:812px){
+	#proj-desc{
+		position:inherit;
+	}
 }
 
 

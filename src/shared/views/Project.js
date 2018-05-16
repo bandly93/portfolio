@@ -74,11 +74,10 @@ class Projects extends Component{
 		const { projectIndex } = this.props.projectInfo;
 		const { innerHeight,innerWidth } = this.props.view;
 		let Proj = projectOptions[projectIndex];
-		let scale = .4;
 		return <div className = 'project'>
 			<h1> {Proj.title} </h1>
 			<h5> {Proj.subTitle} </h5>
-			<img id = {Proj.id} src = {Proj.img} width = {innerWidth*scale} height = {((innerWidth / 8) *5 )*scale} />	
+			<img id = {Proj.id} src = {Proj.img} />	
 			<span id = 'proj-desc'>
 			<ul>
 				<li>Status : In Production but still developing.</li>
