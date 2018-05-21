@@ -4,7 +4,7 @@ export const projectOptions = [
 	{
 		title:'VB Productions',
 		subTitle:'Photography + Cinematography',
-		id : 'volcano-gif',
+		id : 'project-img',
 		img : './images/testing.gif',
 		url : '//www.volcanoboyz.com/h/multimedia',
 		description: 'A fully-secured and responsive webpage for a multimedia production company.',
@@ -13,6 +13,7 @@ export const projectOptions = [
 	{
 		url : '//www.google.com',
 		img : blankImg,
+		id : 'project-img',
 		title : 'Project 2',
 		subTitle:'Example',
 		description : 'Example project that I will fill in later.',
@@ -22,6 +23,7 @@ export const projectOptions = [
 		url : '//www.google.com',
 		img : blankImg,
 		title : 'Project 3',
+		id : 'project-img',
 		subTitle:'Example',
 		description : 'Example project that I will fill in later.',
 		projectUrl : '//www.google.com',
