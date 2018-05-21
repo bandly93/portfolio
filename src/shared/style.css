@@ -22,6 +22,16 @@ a:hover{
 	cursor:pointer;
 }
 
+
+
+.inline{
+	display:inline;
+}
+
+.none{
+	display:none;
+}
+
 /*~~~~~~~~~~~~~~~~~~NAVBAR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #hamburger-icon{
 	content:url('./images/hamburger.svg');

@@ -1,8 +1,8 @@
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const MinifyPlugin = require('babel-minify-webpack-plugin');
+//const MinifyPlugin = require('babel-minify-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
+//const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
@@ -28,12 +28,14 @@ module.exports = env => {
         }
       }),
 			new UglifyJSPlugin(),
+			/*
 			new CompressionPlugin({
 				asset : '[path].gz[query]',
 				algorithm : 'gzip',
 				test : /\.(js|css|html|svg|jpg|png|gif)$/,
 				minRatio:1,
 			}),
+			*/
 			new BrotliPlugin({
 				asset : '[path].br[query]',
 				algorithm:'brolti',

@@ -1,11 +1,12 @@
 import React, { Fragment,Component } from 'react';
-import { homeOptions } from '../data/homeOptions';
+import { homeOptions,aboutOptions } from '../data/homeOptions';
 
 class Home extends Component{
 	constructor(props){
 		super(props);
 		this.state = {
 			interval : false,
+			compact : true,
 		}
 	}
 
@@ -22,11 +23,24 @@ class Home extends Component{
 			clearInterval(this.carousel())
 		})	
 	}
+
+	handleClickToggle = () => {
+		this.setState({compact:!this.state.compact})
+	}
 	
 	intro = () => {
+		const { compact } = this.state;
 		return <Fragment>
 			<h1> A Little About Me... </h1>
-			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>{aboutOptions[0].text}</p>
+			<p>{aboutOptions[1].text}</p>	
+			<button className = {compact?'inline':'none'} onClick = {this.handleClickToggle}> read more </button>
+			<div className = {compact?'none':'block'}>
+				<p>{aboutOptions[2].text}</p>
+				<p>{aboutOptions[3].text}</p>
+				<p>{aboutOptions[4].text}</p>
+				<button className = {compact?'none':'inline'} onClick ={this.handleClickToggle}> close </button>
+			</div>
 		</Fragment>
 	}
 
