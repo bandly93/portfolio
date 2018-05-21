@@ -34,12 +34,12 @@ class Home extends Component{
 			<h1> A Little About Me... </h1>
 			<p>{aboutOptions[0].text}</p>
 			<p>{aboutOptions[1].text}</p>	
-			<button className = {compact?'inline':'none'} onClick = {this.handleClickToggle}> read more </button>
-			<div className = {compact?'none':'block'}>
+			<button className = {compact?'inline':'none'} onClick = {this.handleClickToggle}> Read More! </button>
+			<div className = {compact?'none':'inline'}>
 				<p>{aboutOptions[2].text}</p>
 				<p>{aboutOptions[3].text}</p>
 				<p>{aboutOptions[4].text}</p>
-				<button className = {compact?'none':'inline'} onClick ={this.handleClickToggle}> close </button>
+				<button className = {compact?'none':'inline'} onClick = {this.handleClickToggle}> Close! </button>
 			</div>
 		</Fragment>
 	}
