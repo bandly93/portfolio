@@ -266,10 +266,6 @@ input, textarea{
 	width:100%;
 }
 
-#volcano-gif{
-	content: url('./images/testing.gif');
-}
-
 #proj-desc{
 	position:absolute;
 }
@@ -277,18 +273,25 @@ input, textarea{
 #proj-desc ul {
 	display:inline-block;
 	padding: 0 5%;
+	width:70%;
 }
 
 #proj-desc li{
 	list-style-type:circle;
 }
+
+#project-img{
+	width:50vw;
+
+}
+
 @media only screen and (max-width:812px){
 	#proj-desc{
 		position:inherit;
 	}
 	
 	#project-img{
-		width:75vw;
+		width:60vw;
 	}	
 }
 
