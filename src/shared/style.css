@@ -51,24 +51,24 @@ a:hover{
 #logo{
 	content:url('./images/logo.svg');
 	background-repeat : no-repeat;
+	width:80px;
 }
 
 @media only screen and (min-width:813px){
 	#navbar-secondary{
 		display:none;
 	}
-
 	#navbar-primary{
 		justify-content:space-around;
-
 	}
+
 }
 			/*Mobile view */
 @media only screen and (max-width:812px){
 	#navbar-primary{
 		display:none;
 	}
-
+	
 	#navbar-secondary{
 		justify-content:space-between;
 	}

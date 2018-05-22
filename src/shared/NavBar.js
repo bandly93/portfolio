@@ -36,7 +36,7 @@ class NavBar extends Component{
 			  <div>
 			    <Link to = '/'> 
 						<img id = 'logo' 
-							src = './images/logo.jpg'
+							src = './images/logo.svg'
 							onClick = {() => toggleNav({clicked:false})}
 						/>
 					</Link>
