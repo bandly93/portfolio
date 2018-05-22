@@ -28,7 +28,6 @@ export const renderFullPage = (html,preloadedState) => {
         <title>Portfolio</title>
 				<meta name = 'viewport' content = 'width=device-width'>
 				<link rel="icon" href="data:;base64,iVBORwOKGO=">
-				<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 				<link href = '/client-bundle.css' rel='stylesheet'>
 			</head>
       <body>
