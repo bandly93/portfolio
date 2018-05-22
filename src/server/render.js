@@ -27,13 +27,13 @@ export const renderFullPage = (html,preloadedState) => {
       <head>
         <title>Portfolio</title>
 				<meta name = 'viewport' content = 'width=device-width'>
-				<link rel="icon" href="data:;base64,iVBORwOKGO=" />
+				<link rel="icon" href="data:;base64,iVBORwOKGO=">
 				<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 				<link href = '/client-bundle.css' rel='stylesheet'>
 			</head>
       <body>
         <div id="root">${html}</div>
-				<script src= '/client-bundle.js'></script>
+				<script src= '/client-bundle.js' async = true></script>
 				<script> window.__PRELOADED_STORE__ = ${serialize(preloadedState)} </script>
       </body>
     </html>

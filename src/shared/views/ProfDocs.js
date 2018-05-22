@@ -8,7 +8,7 @@ class ProfDocs extends Component{
 		return<Fragment>
 			<img
 				className = 'resume' 
-				src = '../images/resume.jpg'
+				src = '../images/Blank.svg'
 			/>
 		</Fragment>
 	}	
