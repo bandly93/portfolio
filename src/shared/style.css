@@ -5,10 +5,10 @@ ul,div{
 
 body,html {
 	color:black;
-  font-family: Rubik;
+  font-family:Rubik;
 	background-image:url('./images/background.jpg');
 	margin:0;
-	padding: 0;
+	padding:0;
 }
 
 a{
@@ -183,6 +183,7 @@ input, textarea{
   background-repeat: no-repeat;
 	background-size:20px;
 	border: 1px solid #ccc;
+	margin:2%;
    
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -214,7 +215,7 @@ input, textarea{
 }
 
 .project h1{
-	font-size:48px;
+	font-size:2em;
 }
 
 .project h1,h5{
@@ -280,9 +281,13 @@ input, textarea{
 	list-style-type:circle;
 }
 
-#project-img{
+.project-img{
 	width:50vw;
+	height:35vw;
+}
 
+#img-1{
+	content:url('./images/testing.gif');	
 }
 
 @media only screen and (max-width:812px){
@@ -290,7 +295,7 @@ input, textarea{
 		position:inherit;
 	}
 	
-	#project-img{
+	.project-img{
 		width:60vw;
 	}	
 }

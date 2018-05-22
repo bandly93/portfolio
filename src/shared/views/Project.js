@@ -77,7 +77,7 @@ class Projects extends Component{
 		return <div className = 'project'>
 			<h1> {Proj.title} </h1>
 			<h5> {Proj.subTitle} </h5>
-			<img id = {Proj.id} src = {Proj.img} />	
+			<img id = {Proj.id} className = {Proj.className} src = {Proj.img} />	
 			<span id = 'proj-desc'>
 			<ul>
 				<li>Status : In Production but still developing.</li>
