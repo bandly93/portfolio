@@ -49,7 +49,7 @@ a:hover{
 }
 
 #logo{
-	content:url('./images/logo.jpg');
+	content:url('./images/logo.svg');
 	background-repeat : no-repeat;
 }
 

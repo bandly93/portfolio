@@ -20,7 +20,7 @@ class NavBar extends Component{
 		return <nav> 
       <div className = 'navbar' id = 'navbar-primary'>
 			  <div>
-			    <Link to = '/'> <img id = 'logo' src = './images/logo.jpg'/></Link>
+			    <Link to = '/'> <img id = 'logo' src = './images/logo.svg'/></Link>
 			  </div>
 			  <div>
 			  	<Link to = '/projects'> PROJECTS </Link>
