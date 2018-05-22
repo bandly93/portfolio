@@ -1,4 +1,4 @@
-export const blankImg = 'http://via.placeholder.com/350x150';
+export const blankImg = 'https://via.placeholder.com/350x150';
 
 export const projectOptions = [
 	{
