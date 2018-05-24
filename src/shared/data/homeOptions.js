@@ -6,10 +6,17 @@ export const homeOptions = [
 		images : [ph,ph,ph],
 	},
 	{
+		text : 'received a google insight optimization score of 90 for mobile and 97 for desktop.',
+		images : [ph,ph,ph],
+	},
+	{
+		text : 'is faster than 99% of other websites testing for speed on the pingdom speed test.',
+		images : [ph,ph,ph],
+	},
+	{
 		text : 'was developed using modern frameworks such as React, Redux, Express, and Node.',
 		images : [ph,ph,ph,ph],
 	},
-
 	{
 		text : 'is using brotli compression algorithm to reduce the amount of data downloaded for initial page load. This improved the speed of the webpage and ultimately reduced data cost by 100%.',
 		images : [ph,ph,ph],
