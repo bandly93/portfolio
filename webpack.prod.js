@@ -40,8 +40,8 @@ module.exports = env => {
 				asset : '[path].br[query]',
 				algorithm:'brolti',
 				test : /\.(js|css|html|svg|jpg|png|gif)$/,
-				threshold:0,
-				minRatio:1,
+				threshold:10240,
+				minRatio:0.8,
 				quality: 11,
 			}),
   	]
