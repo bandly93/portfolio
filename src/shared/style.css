@@ -48,7 +48,7 @@ a:hover{
   margin: auto 0;
 }
 
-#logo{
+.nav-logo{
 	content:url('./images/logo.svg');
 	background-repeat : no-repeat;
 	width:80px;

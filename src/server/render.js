@@ -23,10 +23,11 @@ export const handleRender = (req,res) => {
 export const renderFullPage = (html,preloadedState) => {
 	return `
 		<!doctype html>
-		<html>
+		<html lang = 'en'>
       <head>
         <title>Portfolio</title>
 				<meta name = 'viewport' content = 'width=device-width'>
+				<meta name = 'description' content = 'portfolio Band Ly Web Developer'
 				<link rel="icon" href="data:;base64,iVBORwOKGO=">
 				<style>
 					div{list-style-type:none;-webkit-padding-start:0}body,html{color:black;font-family:Arial,Helvetica,sans-serif;background-image:url('./images/background.jpg');margin:0;padding:0}a{color:black;text-decoration:none;padding:0 0.5vw}#hamburger-icon{content:url('./images/hamburger.svg');height:40px;margin-right:2vw}.navbar{background-color:white;display:inline-flex;text-align:center;width:100%}.navbar div{margin:auto 0}#logo{content:url('./images/logo.svg');background-repeat:no-repeat;width:80px}@media only screen and (min-width:813px){#navbar-secondary{display:none}#navbar-primary{justify-content:space-around}}@media only screen and (max-width:812px){#navbar-primary{display:none}#navbar-secondary{justify-content:space-between}.on{display:inline-grid}.off{display:none}}										

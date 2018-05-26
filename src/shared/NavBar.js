@@ -20,7 +20,12 @@ class NavBar extends Component{
 		return <nav> 
       <div className = 'navbar' id = 'navbar-primary'>
 			  <div>
-			    <Link to = '/'> <img id = 'logo' src = './images/logo.svg'/></Link>
+			    <Link to = '/'> 
+						<img className = 'nav-logo'
+							src = './images/logo.svg'
+							alt = ''
+						/>
+					</Link>
 			  </div>
 			  <div>
 			  	<Link to = '/projects'> PROJECTS </Link>
@@ -35,8 +40,9 @@ class NavBar extends Component{
       <div className = 'navbar' id = 'navbar-secondary'>
 			  <div>
 			    <Link to = '/'> 
-						<img id = 'logo' 
+						<img className = 'nav-logo' 
 							src = './images/logo.svg'
+							alt = ''
 							onClick = {() => toggleNav({clicked:false})}
 						/>
 					</Link>
@@ -44,7 +50,8 @@ class NavBar extends Component{
 				<div>	
 					<img className = {clicked?'off':'on'}
 						src = './images/hamburger.svg' 
-						id = 'hamburger-icon' 
+						id = 'hamburger-icon'
+						alt = '' 
 						onClick = {() => toggleNav({clicked:true})}/>
 				</div>
 			  <div className = {clicked?'on':'off'} onClick = {()=>toggleNav({clicked:false})}>

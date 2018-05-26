@@ -49,7 +49,7 @@ class Home extends Component{
 			<div key = {i} className = 'slideDiv'>
 				<p>{homeOptions[i].text}</p>
 				{homeOptions[i].images.map(({},j)=>(
-					<img key = {j} src = {homeOptions[i].images[j]} />
+					<img key = {j} src = {homeOptions[i].images[j]} alt = ''/>
 				))}
 			</div>
 			)
