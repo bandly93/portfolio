@@ -6,11 +6,11 @@ export const homeOptions = [
 		images : [ph,ph,ph],
 	},
 	{
-		text : 'received a google insight optimization score of 90 for mobile and 97 for desktop.',
+		text : 'received a google insight optimization score of 100 for mobile and 100 for desktop.',
 		images : [ph,ph,ph],
 	},
 	{
-		text : 'is faster than 99% of other websites testing for speed on the pingdom speed test.',
+		text : 'is faster than 99% of other websites while testing for page-speed on the pingdom speed test.',
 		images : [ph,ph,ph],
 	},
 	{
@@ -18,7 +18,7 @@ export const homeOptions = [
 		images : [ph,ph,ph,ph],
 	},
 	{
-		text : 'is using brotli compression algorithm to reduce the amount of data downloaded for initial page load. This improved the speed of the webpage and ultimately reduced data cost by 100%.',
+		text : 'is using brotli compression algorithm to reduce the amount of downloaded data for optimal user experience.',
 		images : [ph,ph,ph],
 	},
 	{
