@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { updateProject } from '../redux/projectModule.js';
 
 class Projects extends Component{
-
 	updateLogic = (e) => {
 		const { name } = e.currentTarget;
 		let index = this.props.projectInfo.projectIndex;
@@ -20,7 +19,7 @@ class Projects extends Component{
 		}else{
 			index = ( index + 1 ) % length;
 		}
-		updateProject({projectIndex: index});
+		updateProject({projectIndex:index});
 	}
 
 	leftButton = () => {
@@ -44,24 +43,16 @@ class Projects extends Component{
 
 	
 	carouselIndicator = () => {
-		let style = {
-			on:{
-				'backgroundColor':'black',
-			},
-			off:{
-				'backgroundColor':'white',
-			}
-		}
-		
+	
 		const { updateProject } = this.props;
 		const { projectIndex } = this.props.projectInfo;
 		return <ul id = 'carousel-indicator'>
 			{
 				projectOptions.map(({},i) => 
 					<li
-						style = {projectIndex === i? style.on : style.off}
 						key = {i}
 						className = 'carousel-indicator-item'
+						id = {projectIndex === i? 'bg-black': 'bg-white'}
 						onClick = {(e) => updateProject({projectIndex:e.currentTarget.value})}
 						value = {i}>
 					</li>
@@ -80,10 +71,13 @@ class Projects extends Component{
 			<img id = {Proj.id} className = {Proj.className} src = {Proj.img} />	
 			<span id = 'proj-desc'>
 			<ul>
-				<li>Status : In Production but still developing.</li>
-				<li>Technologies : React, Redux, Webpack, Node, MongoDB, Express.</li>
-				<li>Some content will be here!</li>
-				<li>Some content will be here!</li>
+				{
+					Proj.listItems.map((item,i) =>
+						<li key = {i}>
+							{item}
+						</li>
+					)
+				}
 			</ul>	
 			</span>
 			<p><a href = {Proj.url} target = '_blank'> Click here to visit page! </a></p>

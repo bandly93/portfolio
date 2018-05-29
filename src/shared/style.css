@@ -30,6 +30,14 @@ a:hover{
 	display:none;
 }
 
+#bg-black{
+	background-color:black;
+}
+
+#bg-white{
+	background-color:white;
+}
+
 /*~~~~~~~~~~~~~~~~~~NAVBAR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #hamburger-icon{
 	content:url('./images/hamburger.svg');

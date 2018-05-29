@@ -80,13 +80,13 @@ class Home extends Component{
 	}
 
 	render(){
-		return<div className = 'homepage'>
-			<div className = 'intro-div'>
-				{this.intro()}
-			</div>
+		return<div className = 'homepage'>	
 			<div className = 'portfolio-div'>
 				<h1> My Portfolio ... </h1>
 				{this.siteInformationSlide()}
+			</div>
+			<div className = 'intro-div'>
+				{this.intro()}
 			</div>
 		</div>
 	}
