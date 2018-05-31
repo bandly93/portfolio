@@ -7,26 +7,18 @@ import Home from '../views/Home.js';
 export const RoutesArray = [
 	{
 		path : '/',
-		description : 'HOME',
-		component : Home,
-		id : 'home-item',
+		component : Project,
 	},
 	{
 		path : '/contact',
-		description : 'CONTACT',
 		component : Contact,
-		id : 'contact-item',
 	},
 	{
-		path : '/projects',
-		description : 'PROJECTS',
-		component : Project,
-		id : 'project-item',
+		path : '/about_me',
+		component : Home,
 	},	
 	{
-		path : '/prof_docs',
-		description : 'RESUME',
+		path : '/resume',
 		component : ProfDocs,
-		id : 'resume-item',
 	},
 ]

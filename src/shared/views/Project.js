@@ -39,11 +39,8 @@ class Projects extends Component{
 			&#10095;
 		</button>
 	}
-	
-
-	
-	carouselIndicator = () => {
-	
+		
+	carouselIndicator = () => {	
 		const { updateProject } = this.props;
 		const { projectIndex } = this.props.projectInfo;
 		return <ul id = 'carousel-indicator'>
@@ -104,10 +101,8 @@ const mapStateToProps = (state) => {
 	}
 }
 
-const mapDispatchToProps = (dispatch) => {
-	return{
-		updateProject : (data) => dispatch(updateProject(data)),	
-	}
+const mapDispatchToProps = {
+		updateProject
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Projects);	 

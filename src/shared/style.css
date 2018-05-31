@@ -89,6 +89,25 @@ a:hover{
 	} 
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~homepage~~~~~~~~~~~~~~~~~~~~~~~~*/
+#slide1{
+	content:url('./images/seo.svg');
+}
+
+#slide2{
+	content:url('./images/fast.svg');
+}
+
+#slide3{
+	content:url('./images/javascript.svg');
+}
+
+#slide4{
+	content:url('./images/dynamic.svg');
+}
+
+#slide5{
+	content:url('./images/responsive.svg');
+}
 
 .homepage{
 	text-align:center;
@@ -100,17 +119,34 @@ a:hover{
 	padding: 0 25%;
 }
 .intro-div {
-	color:white;
+	color:black;
+	background:white;
 }
 
 .portfolio-div{
-	background:white;
-	color:black;
+	color:white;
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.slideDiv{	
+	width:30vw;
+	margin: 0 auto;
+}
+
+.slideDiv img{
+	width:8vw;
+}
+
+@media only screen and (min-width:813px) and (max-width:1060px){
+	.slideDiv{
+		width:45vw;
+	}
 }
 
 @media only screen and (max-width:812px){
-	.homepage p{
-		padding: 0 10%;
+	.slideDiv{
+		width:90vw;
 	}
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -290,8 +326,8 @@ input, textarea{
 }
 
 .project-img{
-	width:50vw;
-	height:35vw;
+	width:40vw;
+	height:30vw;
 }
 
 #img-1{

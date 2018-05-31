@@ -5,23 +5,8 @@ class Home extends Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			interval : false,
 			compact : true,
 		}
-	}
-
-	componentDidMount(){
-		let index = 0;
-		let slides = document.getElementsByClassName('slideDiv');
-		this.setState({interval:true},()=>{
-			slides.length > 1 ? this.carousel(index):null
-		})
-	}
-
-	componentWillUnmount(){
-		this.setState({interval:false},()=>{
-			clearInterval(this.carousel())
-		})	
 	}
 
 	handleClickToggle = () => {
@@ -45,44 +30,18 @@ class Home extends Component{
 	}
 
 	siteInformationSlide = () => {	
-		return homeOptions.map(({},i) => (
+		return homeOptions.map(({text,images},i) => (
 			<div key = {i} className = 'slideDiv'>
-				<p>{homeOptions[i].text}</p>
-				{homeOptions[i].images.map(({},j)=>(
-					<img key = {j} src = {homeOptions[i].images[j]} alt = ''/>
-				))}
+				<img id = {'slide' + (i+1)} src = {images} alt = ''/>
+				<p> {text} </p>
 			</div>
-			)
-		)
-	}
-
-	carousel = (index) => {
-		let slides = document.getElementsByClassName('slideDiv');
-		if(slides.length > 0){
-			for ( let i = 0 ; i < slides.length ; i++){
-				slides[i].style.display = 'none';
-			}
-			index++
-			if(index > slides.length) {
-				index = 1;
-			}
-			
-			slides[index-1].style.display = 'block';
-			setTimeout(()=>this.carousel(index),8000);
-
-				/* TEST */
-
-			/*
-			var d = new Date();
-			console.log(d.getSeconds());
-			*/
-		}
+		))
 	}
 
 	render(){
-		return<div className = 'homepage'>	
-			<div className = 'portfolio-div'>
-				<h1> My Portfolio ... </h1>
+		return<div className = 'homepage'>
+			<h1> My Portfolio ... </h1>	
+			<div className = 'portfolio-div'>	
 				{this.siteInformationSlide()}
 			</div>
 			<div className = 'intro-div'>

@@ -1,29 +1,25 @@
-export const ph = ''
+export const ph = 'https://via.placeholder.com/350x150'
 
 export const homeOptions = [
 	{
-		text : 'is server-side rendered, which provides web-crawlers with content for search engine functionalities.',
-		images : [ph,ph,ph],
+		text : 'is server-side rendered. Search Engine Optimization enabled.',
+		images : ph,
 	},
 	{
-		text : 'received a google insight optimization score of 100/100 for mobile and 100/100 for desktop.',
-		images : [ph,ph,ph],
-	},
-	{
-		text : 'is faster than 99% of all other websites, while testing for page-speed on the pingdom speed test within west-coast servers.',
-		images : [ph,ph,ph],
+		text : 'is fast and optimized.',
+		images : ph,
 	},
 	{
 		text : 'was developed using modern frameworks such as React, Redux, Express, Redux, and Node.',
-		images : [ph,ph,ph,ph],
+		images : ph,
 	},
 	{
-		text : 'is using brotli compression algorithm to reduce the amount of downloaded data for optimal user experience.',
-		images : [ph,ph,ph],
+		text : 'is dynamic.',
+		images : ph,
 	},
 	{
-		text : 'was designed to be responsive on all screen sizes. Try resizing the browser or viewing from a different size device.', 
-		images : [ph,ph,ph],
+		text : 'is responsive. Try resizing the browser or using a different size device.', 
+		images : './images/responsive.svg',
 	},
 ]
 

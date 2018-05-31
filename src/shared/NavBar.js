@@ -28,9 +28,10 @@ class NavBar extends Component{
 					</Link>
 			  </div>
 			  <div>
-			  	<Link to = '/projects'> PROJECTS </Link>
-			  	<Link to = '/contact'> CONTACT </Link>
-			  	<Link to = '/prof_docs'> RESUME </Link>
+			  	<Link to = '/about_me'> ABOUT </Link>
+					<Link to = '/contact'> CONTACT </Link>
+					<Link to = '/'> PORTFOLIO </Link>	
+			  	<Link to = '/resume'> RESUME </Link>
         </div>
         <div>
 		  		<Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link>
@@ -55,9 +56,10 @@ class NavBar extends Component{
 						onClick = {() => toggleNav({clicked:true})}/>
 				</div>
 			  <div className = {clicked?'on':'off'} onClick = {()=>toggleNav({clicked:false})}>
-			  	<Link to = '/projects'> PROJECTS </Link>
-			  	<Link to = '/contact'> CONTACT </Link>
-			  	<Link to = '/prof_docs'> RESUME </Link>
+			  	<Link to = '/about_me'> ABOUT </Link>
+					<Link to = '/contact'> CONTACT </Link>
+					<Link to = '/'> PORTFOLIO </Link>
+			  	<Link to = '/resume'> RESUME </Link>
 		  		<Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link>
 		  		<Link to = '//www.linkedin.com/in/band-l-245493b6/' target = '_blank'> LINKEDIN </Link>
 	      </div>
