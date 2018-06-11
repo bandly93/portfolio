@@ -30,7 +30,7 @@ class NavBar extends Component{
 			  <div>
 			  	<Link to = '/about_me'> ABOUT </Link>
 					<Link to = '/contact'> CONTACT </Link>
-					<Link to = '/'> PORTFOLIO </Link>	
+					<Link to = '/'> PROJECTS </Link>	
 			  	<Link to = '/resume'> RESUME </Link>
         </div>
         <div>
@@ -58,7 +58,7 @@ class NavBar extends Component{
 			  <div className = {clicked?'on':'off'} onClick = {()=>toggleNav({clicked:false})}>
 			  	<Link to = '/about_me'> ABOUT </Link>
 					<Link to = '/contact'> CONTACT </Link>
-					<Link to = '/'> PORTFOLIO </Link>
+					<Link to = '/'> PROJECTS </Link>
 			  	<Link to = '/resume'> RESUME </Link>
 		  		<Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link>
 		  		<Link to = '//www.linkedin.com/in/band-l-245493b6/' target = '_blank'> LINKEDIN </Link>

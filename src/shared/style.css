@@ -3,6 +3,10 @@ ul,div{
 	-webkit-padding-start: 0;
 }
 
+h1{
+	width:100%;
+}
+
 body,html {
 	color:black;
 	font-family:Arial, Helvetica, sans-serif;
@@ -109,6 +113,10 @@ a:hover{
 	content:url('./images/responsive.svg');
 }
 
+#portfolio-header{
+	color:white;
+
+}
 .homepage{
 	text-align:center;
 	width:100vw;
@@ -168,7 +176,7 @@ a:hover{
 }
 
 .resume{	
-	background-image:url('./images/Blank.svg');	
+	background-image:url('./images/blank.svg');	
 	border:1px solid black;
 }
 
@@ -254,12 +262,12 @@ input, textarea{
 .project{
 	border-radius:10px;
 	background-color:white;
-	width:80vw;	
+	width:65vw;	
 	padding: 1%;
 }
 
 .project h1{
-	font-size:2em;
+	font-size:4vw;
 }
 
 .project h1,h5{
@@ -318,7 +326,7 @@ input, textarea{
 #proj-desc ul {
 	display:inline-block;
 	padding: 0 5%;
-	width:70%;
+	width:fit-content;
 }
 
 #proj-desc li{
@@ -327,11 +335,7 @@ input, textarea{
 
 .project-img{
 	width:40vw;
-	height:30vw;
-}
-
-#img-1{
-	content:url('./images/testing.gif');	
+	height:25vw;
 }
 
 @media only screen and (max-width:812px){

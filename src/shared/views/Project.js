@@ -67,14 +67,8 @@ class Projects extends Component{
 			<h5> {Proj.subTitle} </h5>
 			<img id = {Proj.id} className = {Proj.className} src = {Proj.img} />	
 			<span id = 'proj-desc'>
-			<ul>
-				{
-					Proj.listItems.map((item,i) =>
-						<li key = {i}>
-							{item}
-						</li>
-					)
-				}
+			<ul> 
+				{ Proj.listItems.map((item,i) => <li key = {i}> {item} </li>) }
 			</ul>	
 			</span>
 			<p><a href = {Proj.url} target = '_blank'> Click here to visit page! </a></p>
@@ -94,10 +88,10 @@ class Projects extends Component{
 	}	
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({projectInfo,view}) => {
 	return{
-		projectInfo:state.projectInfo,
-		view:state.view,
+		projectInfo,
+		view
 	}
 }
 

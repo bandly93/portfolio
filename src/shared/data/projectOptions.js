@@ -6,7 +6,7 @@ export const projectOptions = [
 		subTitle:'Photography + Cinematography',
 		className : 'project-img',
 		id : 'img-1',
-		img : './images/testing.gif',
+		img : blankImg,
 		url : '//www.volcanoboyz.com/h/multimedia',
 		listItems : ["Status : In production but actively developing.", 
 									"Technologies : React, Redux, Node, Mongo, and Express.",

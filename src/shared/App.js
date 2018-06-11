@@ -19,6 +19,7 @@ class App extends Component{
 	}	
 
 	render(){
+		console.log('hello');
 		return<div className ='profile'>
 				<NavBar />	
 		</div>

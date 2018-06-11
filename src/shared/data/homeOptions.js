@@ -14,7 +14,7 @@ export const homeOptions = [
 		images : ph,
 	},
 	{
-		text : 'is dynamic.',
+		text : 'is dynamic. You can interact with the website.',
 		images : ph,
 	},
 	{

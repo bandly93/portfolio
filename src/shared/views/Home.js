@@ -29,7 +29,7 @@ class Home extends Component{
 		</Fragment>
 	}
 
-	siteInformationSlide = () => {	
+	topHome = () => {	
 		return homeOptions.map(({text,images},i) => (
 			<div key = {i} className = 'slideDiv'>
 				<img id = {'slide' + (i+1)} src = {images} alt = ''/>
@@ -40,9 +40,10 @@ class Home extends Component{
 
 	render(){
 		return<div className = 'homepage'>
-			<h1> My Portfolio ... </h1>	
-			<div className = 'portfolio-div'>	
-				{this.siteInformationSlide()}
+			<h1 id = 'portfolio-header'>   </h1>	
+			<div className = 'portfolio-div'>
+				<h1> My Portfolio...</h1>	
+				{this.topHome()}
 			</div>
 			<div className = 'intro-div'>
 				{this.intro()}
