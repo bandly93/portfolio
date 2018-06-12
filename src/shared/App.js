@@ -8,13 +8,13 @@ import ReactGA from 'react-ga';
 import {GOOGLE_ANALYTICS} from '../../config.json';
 
 ReactGA.initialize(GOOGLE_ANALYTICS);
-
+ReactGA.pageview(window.location.pathname + window.location.search);
 class App extends Component{
 		
 	componentDidMount(){
 		this.view();
 		window.addEventListener('resize',()=>this.view());
-		ReactGA.pageview(window.location.pathname + window.location.search);
+		console.log(window.location.pathname + window.location.search);
 	}
 	
 	view = () => {
