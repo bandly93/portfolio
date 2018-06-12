@@ -87,5 +87,4 @@ const mapDispatchToProps = {
 	toggleNav,
 }
 
-
 export default withRouter(connect(mapStateToProps,mapDispatchToProps)(NavBar));

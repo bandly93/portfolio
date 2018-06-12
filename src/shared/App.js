@@ -4,9 +4,16 @@ import { updateView } from '../shared/redux/viewModule.js';
 import styles from './styles.css';
 import NavBar from './NavBar.js';
 import { withRouter } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 
-class App extends Component{	
+class App extends Component{
+	constructor(){
+		super();
+		//google analytics 
+		ReactGA.initialize('UA-120709518-1')
+		ReactGA.pageview(window.location.pathname);
+	}
 	componentDidMount(){
 		this.view();
 		window.addEventListener('resize',()=>this.view());
@@ -19,7 +26,6 @@ class App extends Component{
 	}	
 
 	render(){
-		console.log('hello');
 		return<div className ='profile'>
 				<NavBar />	
 		</div>
