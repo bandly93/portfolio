@@ -8,12 +8,16 @@ import ReactGA from 'react-ga';
 
 
 class App extends Component{
+	
 	constructor(){
 		super();
 		//google analytics 
 		ReactGA.initialize('UA-120709518-1')
 		ReactGA.pageview(window.location.pathname);
+		console.log('google Analytics enabled');
+		console.log(window.location.pathname);
 	}
+	
 	componentDidMount(){
 		this.view();
 		window.addEventListener('resize',()=>this.view());
