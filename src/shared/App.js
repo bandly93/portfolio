@@ -4,17 +4,25 @@ import { updateView } from '../shared/redux/viewModule.js';
 import styles from './styles.css';
 import NavBar from './NavBar.js';
 import { withRouter } from 'react-router-dom';
-import ReactGA from 'react-ga';
+import ga from 'react-ga';
 import {GOOGLE_ANALYTICS} from '../../config.json';
 
-ReactGA.initialize(GOOGLE_ANALYTICS);
-ReactGA.pageview(window.location.pathname + window.location.search);
 class App extends Component{
 		
 	componentDidMount(){
 		this.view();
+
 		window.addEventListener('resize',()=>this.view());
-		console.log(window.location.pathname + window.location.search);
+
+		ga.initialize(GOOGLE_ANALYTICS,{debug:false});
+		console.log(this.props.location.pathname);
+		ga.pageview(this.props.location.pathname);
+	}
+	
+	componentWillUpdate(nextProps){
+		if(nextProps.location.pathname !== this.props.location.pathname){
+			ga.pageview(nextProps.location.pathname);
+		}
 	}
 	
 	view = () => {
@@ -24,6 +32,7 @@ class App extends Component{
 	}	
 
 	render(){
+		console.log(this.props.location.pathname);
 		return<div className ='profile'>
 				<NavBar />	
 		</div>
