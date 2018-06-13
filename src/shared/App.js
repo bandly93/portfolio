@@ -7,8 +7,8 @@ import { withRouter } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import {GOOGLE_ANALYTICS} from '../../config.json';
 
-ReactGA.initialize(GOOGLE_ANALYTICS);
-ReactGA.pageview(window.location.pathname + window.location.search);
+//ReactGA.initialize(GOOGLE_ANALYTICS);
+//ReactGA.pageview(window.location.pathname + window.location.search);
 class App extends Component{
 		
 	componentDidMount(){
