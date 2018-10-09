@@ -320,7 +320,7 @@ input, textarea{
 }
 
 #proj-desc{
-	position:absolute;
+	position:inherit;
 }
 
 #proj-desc ul {
@@ -336,6 +336,10 @@ input, textarea{
 .project-img{
 	width:40vw;
 	height:25vw;
+}
+
+#img-2{
+	background-image:url('./images/yelpcamp.png');
 }
 
 @media only screen and (max-width:812px){

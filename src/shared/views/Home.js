@@ -46,7 +46,7 @@ class Home extends Component{
 				{this.topHome()}
 			</div>
 			<div className = 'intro-div'>
-				{this.intro()}
+				{!this.intro()}
 			</div>
 		</div>
 	}

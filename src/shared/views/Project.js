@@ -77,14 +77,22 @@ class Projects extends Component{
 	}	
 	
 	render(){
-		return<Fragment>
-			{this.carouselIndicator()}
-			<div id = 'project-container'>
-				{this.leftButton()}
-				{this.projectContainer()}
-				{this.rightButton()}
-			</div>
-		</Fragment>
+		if(projectOptions.length < 2){
+			return<Fragment>
+				<div id = 'project-container'>
+					{this.projectContainer()}
+				</div>
+			</Fragment>
+		}else{	
+			return<Fragment>
+				{this.carouselIndicator()}
+				<div id = 'project-container'>
+					{this.leftButton()}
+					{this.projectContainer()}
+					{this.rightButton()}
+				</div>
+			</Fragment>
+		}
 	}	
 }
 

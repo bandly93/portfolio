@@ -23,6 +23,16 @@ export const homeOptions = [
 	},
 ]
 
+
+
+
+
+
+
+
+
+
+
 export const aboutOptions = [
 	{
 		text: "Hello there, before interacting with my website I would like to give you a brief introduction about myself and how I became a software engineer."

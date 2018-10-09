@@ -89,10 +89,8 @@ const mapStateToProps = (state) => {
 	}
 }
 
-const mapDispatchToProps = (dispatch) => {
-	return{
-		updateData : (data) => dispatch(updateData(data)),
-		updateView : (data) => dispatch(updateView(data)),
-	}
+const mapDispatchToProps = {
+	updateData,
+	updateView,
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Contact);

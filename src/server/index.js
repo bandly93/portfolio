@@ -1,5 +1,4 @@
 import express from 'express';
-import path from 'path';
 import expressStaticGzip from 'express-static-gzip';
 import { handleRender } from './render.js';
 import bodyParser from 'body-parser';
