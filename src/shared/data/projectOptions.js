@@ -2,6 +2,20 @@ export const blankImg = 'https://i.ytimg.com/vi/3cYBfuphkuE/maxresdefault.jpg';
 
 export const projectOptions = [
 	{
+		url :'//www.google.com',
+		img : '../images/fitnessTrackr.png',
+		id : 'img-3',
+		className : 'project-img',
+		title : 'FitnessTrackr',
+		subTitle : 'A food intake tracker.',
+		listItems : [
+			"Status : Version 1.0",
+			"Technologies Used : React.js, Redux.js, Node.js, Express.js, and PostgreSQL."
+		],
+		description : 'Start acheiving your fitness by signing up and using the fitnessTrackr app',
+		projectUrl : '//www.github.com/bandly93/fitnessTracker',
+	},
+	{
 		url : '//www.volcanoboyz.com/h/multimedia',
 		img : blankImg,
 		id : 'img-1',
@@ -10,7 +24,7 @@ export const projectOptions = [
 		subTitle : 'Photography + Cinematography Website',
 		listItems : [
 			"Status : In production but actively developing.", 
-			"Technologies : React, Redux, Node, Mongo, and Express.",
+			"Technologies Used : React.js, Redux.js, Node.js, Express.js and MongoDB.",
 		],
 		description : 'A fully-secured and responsive webpage for a multimedia production company.',
 		projectUrl : '//www.github.com/bandly93/volcano',
@@ -23,7 +37,7 @@ export const projectOptions = [
 		title : 'YelpCamp',
 		subTitle:'App to raise awareness for camp sites.',
 		listItems : [
-			"Technologies Used : Node, Heroku, MLab, Express, and Passport",
+			"Technologies Used : Node.js, Heroku, MLab, Express.js, and Passport",
 		],
 		description : '',
 		projectUrl : '//www.github.com/bandly93/yelpcamp',

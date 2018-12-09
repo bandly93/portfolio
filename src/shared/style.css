@@ -176,7 +176,7 @@ a:hover{
 }
 
 .resume{	
-	background-image:url('./images/resume.jpg');	
+	background-image:url('./images/resume.png');	
 	border:1px solid black;
 }
 
@@ -336,6 +336,10 @@ input, textarea{
 .project-img{
 	width:40vw;
 	height:25vw;
+}
+
+#img-3{
+	background-image:url('./images/fitnessTrackr.png');
 }
 
 #img-2{
