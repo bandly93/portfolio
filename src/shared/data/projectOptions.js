@@ -2,7 +2,7 @@ export const blankImg = 'https://i.ytimg.com/vi/3cYBfuphkuE/maxresdefault.jpg';
 
 export const projectOptions = [
 	{
-		url :'//www.google.com',
+		url :'//www.fit.blcoder.com',
 		img : '../images/fitnessTrackr.png',
 		id : 'img-3',
 		className : 'project-img',
