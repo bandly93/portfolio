@@ -17,7 +17,7 @@ export const projectOptions = [
 	},
 	{
 		url : '//www.vprod.blcoder.com/h/multimedia',
-		img : blankImg,
+		img : "../images/volcano.png",
 		id : 'img-1',
 		className : 'project-img',
 		title : 'VB Production',

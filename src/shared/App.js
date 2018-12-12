@@ -1,7 +1,7 @@
 import React, {Component,Fragment} from 'react';
 import { connect } from 'react-redux';
 import { updateView } from '../shared/redux/viewModule.js';
-import styles from './styles.css';
+import style from './style.css';
 import NavBar from './NavBar.js';
 import { withRouter } from 'react-router-dom';
 

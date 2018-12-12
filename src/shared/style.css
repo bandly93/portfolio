@@ -346,6 +346,10 @@ input, textarea{
 	background-image:url('./images/yelpcamp.png');
 }
 
+#img-1{
+	background-image:url('./images/volcano.png');
+}	
+
 @media only screen and (max-width:812px){
 	#proj-desc{
 		position:inherit;
