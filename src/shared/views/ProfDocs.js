@@ -35,10 +35,8 @@ const mapPropsToState = (state) => {
 	}
 }
 
-const mapDispatchToProps = (dispatch) => {
-	return{
-		updateView:(data) => dispatch(updateView(data)),
-	}
+const mapDispatchToProps = {
+	updateView,
 }
 
 export default connect(mapPropsToState,mapDispatchToProps)(ProfDocs);
