@@ -11,7 +11,7 @@ const isProd = process.env.NODE_ENV === 'production';
 module.exports = env => { 
   return merge(common,{
     entry: {
-			client: ['./src/client/index.js','./src/shared/style.css'],	
+			client: ['@babel/polyfill','./src/client/index.js'],	
 		},
     mode:'production',
 		plugins: [

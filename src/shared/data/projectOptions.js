@@ -16,7 +16,7 @@ export const projectOptions = [
 		projectUrl : '//www.github.com/bandly93/fitnessTracker',
 	},
 	{
-		url : '//www.vprod.blcoder.com/h/multimedia',
+		url : '//www.vp.blcoder.com/h/multimedia',
 		img : "../images/volcano.png",
 		id : 'img-1',
 		className : 'project-img',

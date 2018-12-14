@@ -11,7 +11,16 @@ module.exports = {
       {
         test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
-        use: [ { loader: "babel-loader"} ]
+        use: [ 
+					{ 
+						loader: "babel-loader",
+						options : {
+							babelrc : false,
+							presets : ['@babel/preset-react','@babel/preset-env'],
+							plugins : ['@babel/plugin-proposal-class-properties'],	
+						}
+					} 
+				]
       },
       {
         test: /\.css$/,
@@ -21,7 +30,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|png|gif|svg)$/,
+        test: /\.(jpg|png|gif|svg|pdf)$/,
         use: [ { loader: "file-loader", options: { name: "images/[name].[ext]" } } ]
       },
     ]

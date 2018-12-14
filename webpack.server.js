@@ -4,7 +4,7 @@ const merge = require('webpack-merge');
 
 module.exports = merge(common,{
 	entry: {
-		server : ['./src/server/index.js','./src/shared/style.css']
+		server : ['@babel/polyfill','./src/server/index.js']
 	},
 	target:'node',
 	externals: [nodeExternals()],	  

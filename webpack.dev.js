@@ -5,7 +5,7 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common,{
 	entry: {
-		client: ['./src/client/index.js','./src/shared/style.css'],	
+		client: ['@babel/polyfill','./src/client/index.js'],	
 	},
 	mode:'development',
 	devtool : 'inline-source-map',
