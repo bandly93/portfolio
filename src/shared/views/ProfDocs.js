@@ -19,7 +19,8 @@ class ProfDocs extends Component{
 		const { innerHeight,innerWidth} = this.props.view;
 		const { pageNumber, numPages } = this.state;
 		return<Fragment>
-			<Document 
+			<Document
+				id = "react-canvas" 
 				file = '../images/resume.pdf'
 				onLoadSuccess = {this.onDocumentLoadSuccess}
 			>

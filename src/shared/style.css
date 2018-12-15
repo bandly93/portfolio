@@ -351,7 +351,8 @@ input, textarea{
 }
 
 .react-pdf__Page__canvas{
-	width:90vw;
+	width:90vw !important;
+	height : auto !important;
 	margin :5%;
 
 }	
